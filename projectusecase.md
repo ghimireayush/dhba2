@@ -21,9 +21,7 @@
 
 ## 1. **Homepage** `/`
 
-### Page File
-- **Location:** `app/page.tsx`
-- **Status:** ✅ Production Ready
+
 
 ### Intention
 The homepage is the **entry point** and **brand showcase** for the DHBA website. It should immediately communicate who DHBA is, what services it provides, and encourage users to explore further.
@@ -150,10 +148,7 @@ The homepage is the **entry point** and **brand showcase** for the DHBA website.
 
 ## 2. **About Page** `/about`
 
-### Page File
-- **Location:** `app/about/page.tsx`
-- **Status:** ✅ Production Ready
-- **Size:** 202 lines
+
 
 ### Intention
 Provide detailed information about DHBA's mission, history, organizational structure, and leadership. Build credibility and trust with comprehensive organizational transparency.
@@ -251,10 +246,7 @@ Provide detailed information about DHBA's mission, history, organizational struc
 
 ## 3. **Hotels Page** `/hotels`
 
-### Page File
-- **Location:** `app/hotels/page.tsx`
-- **Status:** ✅ Production Ready
-- **Size:** 191 lines
+
 
 ### Intention
 Showcase hotel members of DHBA with filtering, search, and discovery features. Help users find member hotels based on criteria like location, rating, and type.
@@ -355,9 +347,6 @@ Showcase hotel members of DHBA with filtering, search, and discovery features. H
 
 ## 4. **Destinations Page** `/destinations`
 
-### Page File
-- **Location:** `app/destinations/page.tsx`
-- **Status:** ✅ Production Ready
 
 ### Intention
 Showcase tourist destinations in and around Kathmandu that hotels serve. Help travelers plan trips and discover places to visit.
@@ -429,9 +418,7 @@ Showcase tourist destinations in and around Kathmandu that hotels serve. Help tr
 
 ## 5. **Events Page** `/events`
 
-### Page File
-- **Location:** `app/events/page.tsx`
-- **Status:** ✅ Production Ready
+
 
 ### Intention
 Promote DHBA events and industry events. Allow users to discover, learn about, and RSVP to events. Build community engagement and participation.
@@ -518,9 +505,7 @@ Promote DHBA events and industry events. Allow users to discover, learn about, a
 
 ## 6. **Gallery Page** `/gallery`
 
-### Page File
-- **Location:** `app/gallery/page.tsx`
-- **Status:** ✅ Production Ready
+
 
 ### Intention
 Showcase visual content (photos and videos) of DHBA events, member hotels, and activities. Build engagement through visual storytelling.
@@ -558,8 +543,7 @@ Showcase visual content (photos and videos) of DHBA events, member hotels, and a
   - Album
 
 #### 4. **Gallery Dropdown Navigation**
-- **Location:** Header navigation
-- **Links:** Quick access to Photos and Videos
+-
 
 ### User Flow
 ```
@@ -593,9 +577,8 @@ Showcase visual content (photos and videos) of DHBA events, member hotels, and a
 
 ## 7. **Members Page** `/members`
 
-### Page File
-- **Location:** `app/members/page.tsx`
-- **Status:** ✅ Production Ready (partial)
+
+
 
 ### Intention
 Display member directory of DHBA member organizations. Allow searching and filtering by member type. Build community visibility and networking.
@@ -669,9 +652,6 @@ Display member directory of DHBA member organizations. Allow searching and filte
 
 ## 8. **Resources Page** `/resources`
 
-### Page File
-- **Location:** `app/resources/page.tsx`
-- **Status:** ✅ Production Ready (partial)
 
 ### Intention
 Provide training materials, guides, best practices, and educational content for members. Support member development and industry knowledge sharing.
@@ -753,9 +733,7 @@ Provide training materials, guides, best practices, and educational content for 
 
 ## 9. **Careers Page** `/careers`
 
-### Page File
-- **Location:** `app/careers/page.tsx`
-- **Status:** ✅ Production Ready
+
 
 ### Intention
 Showcase job openings posted by member hotels and organizations. Connect job seekers with employment opportunities. Support member HR functions.
@@ -839,10 +817,7 @@ Showcase job openings posted by member hotels and organizations. Connect job see
 
 ## 10. **Contact Page** `/contact`
 
-### Page File
-- **Location:** `app/contact/page.tsx`
-- **Status:** ✅ Production Ready
-- **Size:** 212 lines
+
 
 ### Intention
 Provide multiple contact methods and channels for users to reach DHBA. Collect inquiries through contact form. Build trust through transparency and accessibility.
@@ -939,9 +914,7 @@ Provide multiple contact methods and channels for users to reach DHBA. Collect i
 
 ## 11. **Login Page** `/login`
 
-### Page File
-- **Location:** `app/login/page.tsx`
-- **Status:** ✅ Production Ready (demo)
+
 
 ### Intention
 Authenticate users (both admin and members) to access protected features. Gate admin dashboard and member portal.
@@ -1031,9 +1004,7 @@ Member Login:
 
 ## 12. **Sign Up Page** `/signup`
 
-### Page File
-- **Location:** `app/signup/page.tsx`
-- **Status:** ✅ Production Ready (partial)
+
 
 ### Intention
 Allow new organizations to register and become DHBA members. Capture business information. Create new user accounts.
@@ -1128,9 +1099,6 @@ Allow new organizations to register and become DHBA members. Capture business in
 
 ## 13. **Forgot Password Page** `/forgot-password`
 
-### Page File
-- **Location:** `app/forgot-password/page.tsx`
-- **Status:** ✅ Production Ready (partial)
 
 ### Intention
 Allow users who forgot their password to reset it securely. Maintain account accessibility while protecting security.
@@ -1217,9 +1185,7 @@ Allow users who forgot their password to reset it securely. Maintain account acc
 
 ## 14. **Member Portal Entry** `/member-portal`
 
-### Page File
-- **Location:** `app/member-portal/page.tsx`
-- **Status:** ✅ Production Ready (demo)
+
 
 ### Intention
 Redirect authenticated members to their dashboard. Provide entry point to member-only features.
@@ -1245,10 +1211,6 @@ Redirect authenticated members to their dashboard. Provide entry point to member
 ---
 
 ## 15. **Member Dashboard** `/member-portal/dashboard`
-
-### Page File
-- **Location:** `app/member-portal/dashboard/page.tsx`
-- **Status:** ✅ UI Complete | 🔄 Backend Pending
 
 ### Intention
 Provide members with personalized dashboard showing their profile, jobs, events, resources, and network. Central hub for member activities.
@@ -1401,9 +1363,7 @@ Provide members with personalized dashboard showing their profile, jobs, events,
 
 ## 16. **Admin Home** `/admin`
 
-### Page File
-- **Location:** `app/admin/page.tsx`
-- **Status:** ✅ Production Ready (demo)
+
 
 ### Intention
 Redirect authenticated admins to main dashboard. Entry point for admin functions.
@@ -1426,10 +1386,7 @@ Redirect authenticated admins to main dashboard. Entry point for admin functions
 
 ## 17. **Admin Dashboard** `/admin/dashboard`
 
-### Page File
-- **Location:** `app/admin/dashboard/page.tsx`
-- **Status:** ✅ UI Complete | 🔄 Backend Pending
-- **Size:** 293 lines
+
 
 ### Intention
 Provide admin with overview of system status, recent activity, and quick access to all management functions. Central command center for DHBA administrators.
@@ -1598,9 +1555,7 @@ Provide admin with overview of system status, recent activity, and quick access 
 
 ## 18. **Admin Destination Manager** `/admin/destinations`
 
-### Page File
-- **Location:** `app/admin/destinations/page.tsx`
-- **Status:** ✅ UI Complete | 🔄 Backend Pending
+
 
 ### Intention
 Allow admins to create, edit, and manage tourist destination listings. Maintain destination database and content.
