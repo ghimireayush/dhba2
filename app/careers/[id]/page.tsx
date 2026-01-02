@@ -1,5 +1,6 @@
 "use client"
 
+// Job detail page
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Briefcase, MapPin, Clock, DollarSign, Building2, Users, Calendar, ArrowLeft, Bookmark, Share2, CheckCircle2 } from "lucide-react"
@@ -146,7 +147,7 @@ export default function JobDetailPage({ params }: { params: Promise<{ id: string
                         <span>{job.experience}</span>
                       </div>
                       <div className="flex items-center gap-2 font-semibold text-foreground">
-                        <DollarSign size={16} className="text-primary" />
+                       
                         <span>{job.salary}</span>
                       </div>
                     </div>

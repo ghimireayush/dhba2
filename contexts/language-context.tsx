@@ -66,7 +66,7 @@ const translations = {
       memberPortal: "Member Portal",
       admin: "Admin",
       logout: "Logout",
-      resources: "Useful Resources",
+      resources: " Resources",
       blogs: "Blogs",
       news: "News",
       downloads: "Downloads",
@@ -75,7 +75,7 @@ const translations = {
     home: {
       hero: {
         title: "Unity Hotel and Guesthouse Business Association of Nepal",
-        subtitle: "Ekata Hotel and Guesthouse Business Association of Nepal is a dedicated organization representing the hospitality sector in Kathmandu. Established in 2074 B.S., it serves as the umbrella organization for {{count}} active hotel business associations.",
+        subtitle: "Unity Hotel and Guesthouse Business Association of Nepal is a dedicated organization representing the hospitality sector in Kathmandu. Established in 2074 B.S., it serves as the umbrella organization for {{count}} active hotel business associations.",
         cta: "Explore Our Members",
         exploreBtn: "Explore Hotels",
         learnMore: "Learn More",
@@ -291,7 +291,7 @@ const translations = {
       gallery: "ग्यालेरी",
       members: "सदस्यहरु",
       contact: "संपर्क",
-      login: "लगइन",
+      login: "प्रवेश",
       memberPortal: "सदस्य पोर्टल",
       admin: "प्रशासक",
       logout: "लगआउट",

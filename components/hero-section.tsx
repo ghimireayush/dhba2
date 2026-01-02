@@ -82,13 +82,6 @@ export function HeroSection() {
       ctaLink: "/members",
       image: "/luxury-hotel-kathmandu.jpg",
     },
-    {
-      title: t("home.hero.slide2Title", { count: ASSOCIATION_CONFIG.totalAssociations }),
-      subtitle: t("home.hero.slide2Subtitle"),
-      cta: t("home.hero.slide2Cta"),
-      ctaLink: "/destinations",
-      image: "/resort-kathmandu-luxury.jpg",
-    },
     
   ]
 
@@ -136,7 +129,7 @@ export function HeroSection() {
 
       {/* Bottom Part: Hero Content with Video Background */}
       <div
-        className="relative h-[calc(100vh-48px)] md:h-[600px] overflow-hidden"
+        className="relative h-[calc(85h-48px)] md:h-[550px] overflow-hidden"
         onMouseEnter={() => setIsAutoPlay(false)}
         onMouseLeave={() => setIsAutoPlay(true)}
       >
@@ -152,18 +145,12 @@ export function HeroSection() {
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70" />
         </div>
 
-        {/* Meteors Effect */}
-        <Meteors number={30} className="opacity-50" />
 
         {/* Content */}
         <div className="relative h-full flex flex-col items-center justify-center text-center px-4 py-8 z-10">
           <div className="max-w-4xl">
-            {/* Badge */}
-            <div className="inline-block mb-6 animate-fadeInUp">
-              <div className="bg-white/20 border border-white/40 px-4 py-2 rounded-full backdrop-blur-sm">
-                <p className="text-sm font-semibold text-white">{t("home.hero.badge")}</p>
-              </div>
-            </div>
+            
+          
 
             {/* Title with animation */}
             <h1
@@ -200,21 +187,8 @@ export function HeroSection() {
           </div>
         </div>
 
-        {/* Slide indicators */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex gap-3 z-20">
-          {slides.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => {
-                setCurrentSlide(index)
-                setIsAutoPlay(false)
-              }}
-              className={`transition-smooth ${
-                index === currentSlide ? "w-8 h-2 bg-white" : "w-2 h-2 bg-white/50 hover:bg-white/70"
-              } rounded-full`}
-            />
-          ))}
-        </div>
+        
+       
       </div>
 
       <style jsx>{`

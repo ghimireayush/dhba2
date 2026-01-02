@@ -85,21 +85,23 @@ export function Footer() {
                 <Phone size={18} className="text-accent flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="text-xs text-muted-foreground">{t("footer.phone")}</p>
-                  <p className="text-foreground/90 text-sm font-medium">+977 01-4981882</p>
+                   <a href="tel:+9779851170835" className="text-muted-foreground">+977 985-1170835 </a>
+                   <br/>
+                   <a href="tel:+014566866" className="text-muted-foreground">+977 014566866</a>
                 </div>
               </li>
               <li className="flex gap-3 items-start">
                 <Mail size={18} className="text-accent flex-shrink-0 mt-0.5" />
                 <div>
-                  <p className="text-xs text-muted-foreground">{t("footer.email")}</p>
-                  <p className="text-foreground/90 text-sm font-medium">info@ekata.org.np</p>
+                  <p className="text-xs text-muted-foreground">{t("footer.email")}</p>  
+                  <a href="mailto:info@ekata.org.np"         className="text-foreground/90 text-sm font-medium">info@ekata.org.np</a>
                 </div>
               </li>
               <li className="flex gap-3 items-start">
                 <MapPin size={18} className="text-accent flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="text-xs text-muted-foreground">{t("footer.location")}</p>
-                  <p className="text-foreground/90 text-sm font-medium">Kathmandu, Nepal</p>
+                  <p className="text-foreground/90 text-sm font-medium">  Near Tribhuvan International Airport <br/> Pasupatinath  Kathmandu,  </p>
                 </div>
               </li>
             </ul>
@@ -112,33 +114,12 @@ export function Footer() {
         </div>
 
         {/* Divider */}
-        <div className="border-t border-border my-8" />
+        <div className="flex flex-col items-center justify-center text-center gap-6">
+  <p className="text-foreground/60 text-sm">
+    © {currentYear} Unity Hotel and Guesthouse Business Association of Nepal. {t("footer.rights")}
+  </p>
+</div>
 
-        {/* Bottom section */}
-        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
-          <p className="text-foreground/60 text-sm">
-            © {currentYear} Unity Hotel and Guesthouse Business Association of Nepal. {t("footer.rights")}
-          </p>
-
-          {/* Social Links */}
-          <div className="flex items-center gap-4">
-            {[
-              { icon: Facebook, href: "#", label: "Facebook" },
-              { icon: Twitter, href: "#", label: "Twitter" },
-              { icon: Instagram, href: "#", label: "Instagram" },
-              { icon: Linkedin, href: "#", label: "LinkedIn" },
-            ].map((social, index) => (
-              <a
-                key={index}
-                href={social.href}
-                aria-label={social.label}
-                className="w-10 h-10 rounded-full bg-muted hover:bg-primary hover:text-primary-foreground flex items-center justify-center transition-smooth"
-              >
-                <social.icon size={18} />
-              </a>
-            ))}
-          </div>
-        </div>
       </div>
     </footer>
   )
