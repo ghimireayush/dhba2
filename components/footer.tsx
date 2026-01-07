@@ -26,8 +26,8 @@ export function Footer() {
                 />
               </div>
               <div className="hidden sm:block">
-                <span className="text-base font-bold text-foreground leading-tight">United Hotel and Guest House</span>
-                <p className="text-xs text-muted-foreground">Professionals Association, Nepal</p>
+                <span className="text-base font-bold text-foreground leading-tight">United Hotel and Guest House Professionals <br/>  Association, Nepal</span>
+                
               </div>
             </div>
             <p className="text-foreground/70 text-sm leading-relaxed">{t("footer.brand")}</p>
@@ -105,7 +105,7 @@ export function Footer() {
                     rel="noopener noreferrer"
                     className="text-foreground/90 text-sm font-medium hover:text-primary transition-colors"
                   >
-                    Near Tribhuvan International <br/> Airport, Pashupati, Kathmandu, Nepal
+                    Airport Area, Kathmandu, Nepal
                   </a>
                 </div>
               </li>

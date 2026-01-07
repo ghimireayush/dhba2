@@ -3,7 +3,6 @@
 import Link from "next/link"
 import Image from "next/image"
 import { usePathname } from "next/navigation"
-import { GalleryDropdown } from "./gallery-dropdown"
 import { LanguageToggle } from "./language-toggle"
 import { useLanguage } from "@/contexts/language-context"
 
@@ -64,8 +63,6 @@ export function Header() {
                 <span className={underlineClass(link.href)} />
               </Link>
             ))}
-
-            <GalleryDropdown />
 
             {[
               { href: "/resources", label: t("nav.resources") },

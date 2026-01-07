@@ -6,7 +6,7 @@ import { FeaturedSection } from "@/components/featured-section"
 import { NewsSection } from "@/components/news-section"
 import { NewsletterSection } from "@/components/newsletter-section"
 import { AboutPreview } from "@/components/about-preview"
-import { ContactInfoSection } from "@/components/contact-info-section"
+import { GallerySection } from "@/components/gallery-section"
 import { ScrollProgress } from "@/components/scroll-progress"
 import { FloatingActionButton } from "@/components/floating-action-button"
 import { StatisticsSection } from "@/components/statistics-section"
@@ -20,7 +20,7 @@ export default function HomePage() {
         <HeroSection />
         <StatisticsSection />
         <AboutPreview />
-        <ContactInfoSection />
+        <GallerySection />
         <FeaturedSection />
         <CentralCommittee />
         <NewsSection />
