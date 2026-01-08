@@ -15,7 +15,7 @@ const mockDestinations = [
     description: "Ancient royal palace complex with stunning architecture and cultural significance",
     region: "Kathmandu Valley",
     category: "Historical",
-    image: "/placeholder.svg?key=h6kqw",
+    image: "/traditional-nepalese-hotel.jpg",
     featured: true,
   },
   {
@@ -24,7 +24,7 @@ const mockDestinations = [
     description: "Sacred Buddhist temple atop a hill with panoramic city views",
     region: "Kathmandu Valley",
     category: "Religious",
-    image: "/placeholder.svg?key=bgj9l",
+    image: "/tourism-initiative.jpg",
     featured: true,
   },
   {
@@ -33,7 +33,7 @@ const mockDestinations = [
     description: "One of the largest stupas in the world, center of Tibetan Buddhism",
     region: "Kathmandu Valley",
     category: "Religious",
-    image: "/placeholder.svg?key=4dsq7",
+    image: "/bhaktapur-resort-scenic.jpg",
     featured: true,
   },
   {
@@ -42,7 +42,7 @@ const mockDestinations = [
     description: "Beautifully preserved royal palace with intricate Newari craftsmanship",
     region: "Patan",
     category: "Historical",
-    image: "/placeholder.svg?key=pnvmj",
+    image: "/patan-guesthouse-nepal.jpg",
     featured: false,
   },
   {
@@ -51,7 +51,7 @@ const mockDestinations = [
     description: "Ancient city square showcasing traditional Newari architecture",
     region: "Bhaktapur",
     category: "Historical",
-    image: "/placeholder.svg?key=8rkw3",
+    image: "/guesthouse-kathmandu-thamel.jpg",
     featured: false,
   },
   {
@@ -60,7 +60,34 @@ const mockDestinations = [
     description: "Vibrant tourist hub with shops, restaurants, and cultural experiences",
     region: "Kathmandu Valley",
     category: "Urban",
-    image: "/placeholder.svg?key=kq5b2",
+    image: "/hotel-excellence.jpg",
+    featured: false,
+  },
+  {
+    id: "7",
+    name: "Nagarkot Sunrise Point",
+    description: "Scenic viewpoint offering breathtaking Himalayan sunrise views",
+    region: "Kathmandu Valley",
+    category: "Natural",
+    image: "/resort-kathmandu-luxury.jpg",
+    featured: true,
+  },
+  {
+    id: "8",
+    name: "Pashupatinath Temple",
+    description: "Sacred Hindu temple complex on the banks of Bagmati River",
+    region: "Kathmandu Valley",
+    category: "Religious",
+    image: "/luxury-hotel-kathmandu.jpg",
+    featured: true,
+  },
+  {
+    id: "9",
+    name: "Garden of Dreams",
+    description: "Neo-classical garden offering peaceful retreat in the heart of Kathmandu",
+    region: "Kathmandu Valley",
+    category: "Urban",
+    image: "/luxury-hotel-spa.png",
     featured: false,
   },
 ]
@@ -94,85 +121,74 @@ export default function DestinationsPage() {
 
         <section className="py-12 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <div className="mb-12">
-              <h1 className="text-4xl font-bold text-foreground mb-2">Tourist Destinations</h1>
-              <p className="text-lg text-muted-foreground">
+            <div className="mb-12 text-center bg-gradient-to-r from-green-900 via-green-700 to-orange-700 text-white py-12 px-4 rounded-lg">
+              <h1 className="text-4xl font-bold mb-2"> Tourist Destinations</h1>
+              <p className="text-lg opacity-90">
                 Discover the top attractions and destinations in and around Kathmandu
               </p>
             </div>
 
             {/* Search and Filters */}
-            <div className="bg-white border border-border rounded-lg p-6 mb-8">
-              <div className="space-y-4">
+            <div className="bg-white border border-border rounded-lg p-4 mb-8">
+              <div className="flex flex-col lg:flex-row gap-4">
                 {/* Search */}
-                <div>
-                  <label className="block text-sm font-semibold text-foreground mb-2">Search Destinations</label>
+                <div className="flex-1">
                   <div className="relative">
-                    <Search size={20} className="absolute left-3 top-3 text-muted-foreground" />
+                    <Search size={18} className="absolute left-3 top-2.5 text-muted-foreground" />
                     <input
                       type="text"
-                      placeholder="Search by name or description..."
+                      placeholder="Search destinations..."
                       value={searchTerm}
                       onChange={(e) => setSearchTerm(e.target.value)}
-                      className="w-full pl-10 pr-4 py-2 border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                      className="w-full pl-9 pr-3 py-2 text-sm border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                     />
                   </div>
                 </div>
 
-                {/* Filters Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {/* Filters */}
+                <div className="flex gap-2">
                   {/* Region Filter */}
-                  <div>
-                    <label className="block text-sm font-semibold text-foreground mb-2 flex items-center gap-2">
-                      <MapPin size={16} />
-                      Region
-                    </label>
-                    <select
-                      value={selectedRegion}
-                      onChange={(e) => setSelectedRegion(e.target.value)}
-                      className="w-full px-3 py-2 border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-                    >
-                      <option value="">All Regions</option>
-                      {regions.map((region) => (
-                        <option key={region} value={region}>
-                          {region}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
+                  <select
+                    value={selectedRegion}
+                    onChange={(e) => setSelectedRegion(e.target.value)}
+                    className="px-3 py-2 text-sm border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-primary min-w-0"
+                  >
+                    <option value="">All Regions</option>
+                    {regions.map((region) => (
+                      <option key={region} value={region}>
+                        {region}
+                      </option>
+                    ))}
+                  </select>
 
                   {/* Category Filter */}
-                  <div>
-                    <label className="block text-sm font-semibold text-foreground mb-2 flex items-center gap-2">
-                      <Filter size={16} />
-                      Category
-                    </label>
-                    <select
-                      value={selectedCategory}
-                      onChange={(e) => setSelectedCategory(e.target.value)}
-                      className="w-full px-3 py-2 border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-                    >
-                      <option value="">All Categories</option>
-                      {categories.map((category) => (
-                        <option key={category} value={category}>
-                          {category}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-                </div>
+                  <select
+                    value={selectedCategory}
+                    onChange={(e) => setSelectedCategory(e.target.value)}
+                    className="px-3 py-2 text-sm border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-primary min-w-0"
+                  >
+                    <option value="">All Categories</option>
+                    {categories.map((category) => (
+                      <option key={category} value={category}>
+                        {category}
+                      </option>
+                    ))}
+                  </select>
 
-                {/* Clear Filters */}
-                <button
-                  onClick={() => {
-                    setSearchTerm("")
-                    setSelectedRegion("")
-                    setSelectedCategory("")
-                  }}
-                  className="text-primary hover:text-primary/80 font-semibold text-sm transition"
-                >
-                  Clear Filters
-                </button>
+                  {/* Clear Filters */}
+                  {(searchTerm || selectedRegion || selectedCategory) && (
+                    <button
+                      onClick={() => {
+                        setSearchTerm("")
+                        setSelectedRegion("")
+                        setSelectedCategory("")
+                      }}
+                      className="px-3 py-2 text-sm text-primary hover:text-primary/80 font-medium border border-input rounded-lg hover:bg-muted transition whitespace-nowrap"
+                    >
+                      Clear
+                    </button>
+                  )}
+                </div>
               </div>
             </div>
 

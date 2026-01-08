@@ -117,13 +117,51 @@ export default function HotelsPage() {
       <main className="flex-grow">
         <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Hotels" }]} />
 
-        <section className="py-8 px-4 sm:px-6 lg:px-8">
+        <section className="py-12 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <div className="mb-8">
-              <h1 className="text-4xl font-bold text-foreground mb-2">Hotels Directory</h1>
-              <p className="text-lg text-muted-foreground">
-                Explore {filteredHotels.length} quality accommodations in Kathmandu
-              </p>
+            <div className="mb-12 text-center bg-gradient-to-r from-green-900 via-green-700 to-orange-700 text-white py-12 px-4 rounded-lg">
+              <h1 className="text-4xl font-bold mb-2">Members Hotel Directory</h1>
+              <p className="text-lg opacity-90">Explore quality accommodations and member hotels across Nepal</p>
+            </div>
+
+            {/* Search and Filters */}
+            <div className="bg-white border border-border rounded-lg p-4 mb-8">
+              <div className="flex flex-col sm:flex-row items-center gap-4">
+                {/* Search */}
+                <div className="relative flex-1 w-full sm:w-auto">
+                  <input
+                    type="text"
+                    placeholder="Search hotels..."
+                    value={filters.searchTerm}
+                    onChange={(e) => setFilters({ ...filters, searchTerm: e.target.value })}
+                    className="w-full pl-10 pr-4 py-2 border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                  />
+                </div>
+
+                {/* Location Filter */}
+                <div className="flex items-center gap-2 w-full sm:w-auto">
+                  <select
+                    value={filters.location}
+                    onChange={(e) => setFilters({ ...filters, location: e.target.value })}
+                    className="w-full sm:w-48 px-3 py-2 border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                  >
+                    <option value="">All Locations</option>
+                    <option value="Thamel">Thamel</option>
+                    <option value="Kathmandu Center">Kathmandu Center</option>
+                    <option value="Patan">Patan</option>
+                    <option value="Bhaktapur">Bhaktapur</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+
+                {/* Clear */}
+                <button
+                  onClick={() => setFilters({ searchTerm: "", location: "", starRating: null, hotelType: "" })}
+                  className="text-primary hover:text-primary/80 font-semibold text-sm transition whitespace-nowrap"
+                >
+                  Clear Filters
+                </button>
+              </div>
             </div>
 
             {/* View Mode Toggle */}

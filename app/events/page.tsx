@@ -16,7 +16,7 @@ const mockEvents = [
     content: "Annual Hotel Summit bringing together top hospitality professionals...",
     date: "2024-12-15",
     category: "Events",
-    image: "/placeholder.svg?key=9xlhs",
+    image: "/traditional-nepalese-hotel.jpg",
   },
   {
     id: "2",
@@ -25,7 +25,7 @@ const mockEvents = [
     content: "A comprehensive initiative to revitalize the tourism industry...",
     date: "2024-11-10",
     category: "News",
-    image: "/placeholder.svg?key=j3kqp",
+    image: "/tourism-initiative.jpg",
   },
   {
     id: "3",
@@ -34,7 +34,7 @@ const mockEvents = [
     content: "Highlighting outstanding member hotels and their achievements...",
     date: "2024-11-05",
     category: "News",
-    image: "/placeholder.svg?key=8m2jl",
+    image: "/bhaktapur-resort-scenic.jpg",
   },
   {
     id: "4",
@@ -43,7 +43,7 @@ const mockEvents = [
     content: "Comprehensive training covering modern hospitality standards...",
     date: "2024-10-25",
     category: "Events",
-    image: "/placeholder.svg?key=n7gkr",
+    image: "/patan-guesthouse-nepal.jpg",
   },
   {
     id: "5",
@@ -52,7 +52,7 @@ const mockEvents = [
     content: "Safety protocols and operational guidelines for all members...",
     date: "2024-10-20",
     category: "Alerts",
-    image: "/placeholder.svg?key=4jxpl",
+    image: "/guesthouse-kathmandu-thamel.jpg",
   },
   {
     id: "6",
@@ -61,7 +61,7 @@ const mockEvents = [
     content: "Connect with hotel professionals from around the world...",
     date: "2024-10-15",
     category: "Events",
-    image: "/placeholder.svg?key=k8nqv",
+    image: "/hotel-excellence.jpg",
   },
 ]
 
@@ -93,10 +93,10 @@ export default function EventsPage() {
         <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Events & News" }]} />
 
         <section className="py-12 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <div className="mb-12">
-              <h1 className="text-4xl font-bold text-foreground mb-2">Events & News</h1>
-              <p className="text-lg text-muted-foreground">Stay updated with latest news, events, and announcements</p>
+          <div className="max-w-7xl mx-auto">
+            <div className="mb-12 text-center bg-gradient-to-r from-green-900 via-green-700 to-orange-700 text-white py-12 px-4 rounded-lg">
+              <h1 className="text-4xl font-bold mb-2">Events & News</h1>
+              <p className="text-lg opacity-90">Stay updated with latest news, events, and announcements</p>
             </div>
 
             {/* Search and Filters */}
@@ -144,53 +144,45 @@ export default function EventsPage() {
               </div>
             </div>
 
-            {/* Events List */}
+            {/* Events Grid */}
             {sortedEvents.length > 0 ? (
-              <div className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {sortedEvents.map((event) => (
                   <Link
                     key={event.id}
                     href={`/events/${event.id}`}
-                    className="group block border border-border rounded-lg overflow-hidden hover:shadow-lg transition bg-white"
+                    className="group bg-white border border-border rounded-lg overflow-hidden hover:shadow-lg transition"
                   >
-                    <div className="flex flex-col sm:flex-row">
-                      {/* Image */}
-                      <div className="sm:w-48 h-48 sm:h-auto flex-shrink-0 overflow-hidden bg-muted">
-                        <img
-                          src={event.image || "/placeholder.svg"}
-                          alt={event.title}
-                          className="w-full h-full object-cover group-hover:scale-105 transition"
-                        />
-                      </div>
-
-                      {/* Content */}
-                      <div className="flex-grow p-6 flex flex-col justify-between">
-                        <div>
-                          <div className="flex gap-2 mb-3 flex-wrap items-center">
-                            <span className="text-xs font-semibold text-primary bg-primary/10 px-2 py-1 rounded">
-                              {event.category}
-                            </span>
-                            <span className="text-xs text-muted-foreground flex items-center gap-1">
-                              <Calendar size={12} />
-                              {new Date(event.date).toLocaleDateString("en-US", {
-                                year: "numeric",
-                                month: "long",
-                                day: "numeric",
-                              })}
-                            </span>
-                          </div>
-
-                          <h3 className="text-xl font-semibold text-foreground mb-2 group-hover:text-primary transition">
-                            {event.title}
-                          </h3>
-
-                          <p className="text-muted-foreground">{event.excerpt}</p>
+                    <div className="relative aspect-video overflow-hidden bg-muted">
+                      <img
+                        src={event.image || "/placeholder.svg"}
+                        alt={event.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition"
+                      />
+                      {event.category === "Events" && (
+                        <div className="absolute top-3 right-3 bg-accent text-white px-3 py-1 rounded-full text-xs font-semibold">
+                          Featured
                         </div>
-
-                        <div className="mt-4 text-primary font-semibold text-sm flex items-center gap-1 group-hover:gap-2 transition">
-                          Read More →
-                        </div>
+                      )}
+                    </div>
+                    <div className="p-4">
+                      <div className="flex gap-2 mb-2 flex-wrap items-center">
+                        <span className="text-xs font-semibold text-primary bg-primary/10 px-2 py-1 rounded">
+                          {event.category}
+                        </span>
+                        <span className="text-xs font-semibold text-muted-foreground bg-muted px-2 py-1 rounded flex items-center gap-1">
+                          <Calendar size={12} />
+                          {new Date(event.date).toLocaleDateString("en-US", {
+                            month: "short",
+                            day: "numeric",
+                            year: "numeric",
+                          })}
+                        </span>
                       </div>
+                      <h3 className="text-lg font-semibold text-foreground mb-2 group-hover:text-primary transition">
+                        {event.title}
+                      </h3>
+                      <p className="text-sm text-muted-foreground line-clamp-2">{event.excerpt}</p>
                     </div>
                   </Link>
                 ))}

@@ -1,10 +1,17 @@
+"use client"
+
+import { useState, useMemo } from "react"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import { BookOpen, FileText, Video, Award, TrendingUp } from "lucide-react"
+import { Breadcrumb } from "@/components/breadcrumb"
+import { BookOpen, FileText, Video, Award, TrendingUp, Search, Filter } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 
 export default function ResourcesPage() {
+  const [searchTerm, setSearchTerm] = useState("")
+  const [selectedCategory, setSelectedCategory] = useState("")
+
   const resources = [
     {
       id: 1,
@@ -70,105 +77,132 @@ export default function ResourcesPage() {
 
   const categories = ["All", "Training", "Blog", "Guide", "Video", "Document"]
 
+  const filteredResources = useMemo(() => {
+    return resources.filter((resource) => {
+      const matchesSearch =
+        resource.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        resource.description.toLowerCase().includes(searchTerm.toLowerCase())
+
+      const matchesCategory = !selectedCategory || selectedCategory === "All" || resource.category === selectedCategory
+
+      return matchesSearch && matchesCategory
+    })
+  }, [searchTerm, selectedCategory])
+
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
 
       <main className="flex-grow">
-        {/* ================= HERO ================= */}
-        <section className="relative bg-gradient-to-br from-primary/10 via-background to-accent/5 pt-20 pb-10 px-4">
-          <div className="max-w-7xl mx-auto text-center">
-            
+        <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Resources" }]} />
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mt-4 mb-4">
-              Resources & Learning Center
-            </h1>
+        <section className="py-12 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="mb-12 text-center bg-gradient-to-r from-green-900 via-green-700 to-orange-700 text-white py-12 px-4 rounded-lg">
+              <h1 className="text-4xl font-bold mb-2">Resources & Learning Center</h1>
+              <p className="text-lg opacity-90">Access training materials, blog posts, industry guides, and valuable resources to enhance your hospitality business</p>
+            </div>
 
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-6">
-              Access training materials, blog posts, industry guides, and valuable resources to enhance your hospitality business
-            </p>
+            {/* Search and Filters */}
+            <div className="bg-white border border-border rounded-lg p-4 mb-8">
+              <div className="flex flex-col sm:flex-row items-center gap-4">
+                {/* Search */}
+                <div className="relative flex-1 w-full sm:w-auto">
+                  <Search size={20} className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" />
+                  <input
+                    type="text"
+                    placeholder="Search resources..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    className="w-full pl-10 pr-4 py-2 border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                  />
+                </div>
 
-            {/* Search Bar */}
-            <div className="max-w-2xl mx-auto">
-              <div className="relative">
-                <input
-                  type="text"
-                  placeholder="Search resources..."
-                  className="w-full px-6 py-4 rounded-full border border-border focus:outline-none focus:ring-2 focus:ring-primary"
-                />
-                <button className="absolute right-2 top-1/2 -translate-y-1/2 bg-gradient-to-r from-primary to-accent text-white px-6 py-2 rounded-full font-semibold">
-                  Search
+                {/* Category Filter */}
+                <div className="flex items-center gap-2 w-full sm:w-auto">
+                  <Filter size={16} className="text-muted-foreground shrink-0" />
+                  <select
+                    value={selectedCategory}
+                    onChange={(e) => setSelectedCategory(e.target.value)}
+                    className="w-full sm:w-48 px-3 py-2 border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                  >
+                    <option value="">All Categories</option>
+                    {categories.map((cat) => (
+                      <option key={cat} value={cat}>
+                        {cat}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+
+                {/* Clear */}
+                <button
+                  onClick={() => {
+                    setSearchTerm("")
+                    setSelectedCategory("")
+                  }}
+                  className="text-primary hover:text-primary/80 font-semibold text-sm transition whitespace-nowrap"
+                >
+                  Clear Filters
                 </button>
               </div>
             </div>
-          </div>
-        </section>
 
-        {/* ================= CATEGORIES ================= */}
-        <section className="py-4 px-4 border-b border-border -mt-4">
-          <div className="max-w-7xl mx-auto flex flex-wrap justify-center gap-3">
-            {categories.map((category) => (
-              <button
-                key={category}
-                className="px-5 py-2 rounded-full border border-border hover:border-primary hover:bg-primary/5 transition font-medium text-sm"
-              >
-                {category}
-              </button>
-            ))}
-          </div>
-        </section>
-
-        {/* ================= RESOURCES GRID ================= */}
-        <section className="pt-8 pb-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {resources.map((resource) => (
-                <Link
-                  key={resource.id}
-                  href={
-                    resource.category === "Blog"
-                      ? `/resources/blog/${resource.id}`
-                      : `/resources/${resource.id}`
-                  }
-                  className="group bg-card border border-border rounded-xl overflow-hidden hover:shadow-xl transition-all hover:-translate-y-1"
-                >
-                  {/* Image */}
-                  <div className="relative h-48">
-                    <Image
-                      src={resource.image}
-                      alt={resource.title}
-                      fill
-                      className="object-cover group-hover:scale-110 transition-transform"
-                    />
-                    <span className="absolute top-4 left-4 bg-primary text-white px-3 py-1 rounded-full text-xs font-semibold">
-                      {resource.category}
-                    </span>
-                  </div>
-
-                  {/* Content */}
-                  <div className="p-6">
-                    <div className="flex items-center gap-2 text-sm text-muted-foreground mb-3">
-                      <resource.icon size={16} />
-                      <span>{resource.type}</span>
-                      <span>•</span>
-                      <span>{new Date(resource.date).toLocaleDateString()}</span>
+            {/* Resources Grid */}
+            {filteredResources.length > 0 ? (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {filteredResources.map((resource) => (
+                  <Link
+                    key={resource.id}
+                    href={
+                      resource.category === "Blog"
+                        ? `/resources/blog/${resource.id}`
+                        : `/resources/${resource.id}`
+                    }
+                    className="group bg-card border border-border rounded-xl overflow-hidden hover:shadow-xl transition-all hover:-translate-y-1"
+                  >
+                    {/* Image */}
+                    <div className="relative h-48">
+                      <Image
+                        src={resource.image}
+                        alt={resource.title}
+                        fill
+                        className="object-cover group-hover:scale-110 transition-transform"
+                      />
+                      <span className="absolute top-4 left-4 bg-primary text-white px-3 py-1 rounded-full text-xs font-semibold">
+                        {resource.category}
+                      </span>
                     </div>
 
-                    <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition">
-                      {resource.title}
-                    </h3>
+                    {/* Content */}
+                    <div className="p-6">
+                      <div className="flex items-center gap-2 text-sm text-muted-foreground mb-3">
+                        <resource.icon size={16} />
+                        <span>{resource.type}</span>
+                        <span>•</span>
+                        <span>{new Date(resource.date).toLocaleDateString()}</span>
+                      </div>
 
-                    <p className="text-sm text-muted-foreground line-clamp-3">
-                      {resource.description}
-                    </p>
+                      <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition">
+                        {resource.title}
+                      </h3>
 
-                    <div className="mt-4 text-primary font-semibold text-sm flex items-center">
-                      Read More →
+                      <p className="text-sm text-muted-foreground line-clamp-3">
+                        {resource.description}
+                      </p>
+
+                      <div className="mt-4 text-primary font-semibold text-sm flex items-center">
+                        Read More →
+                      </div>
                     </div>
-                  </div>
-                </Link>
-              ))}
-            </div>
+                  </Link>
+                ))}
+              </div>
+            ) : (
+              <div className="text-center py-12 bg-muted/30 rounded-lg">
+                <p className="text-lg text-muted-foreground">No resources found. Try adjusting your filters.</p>
+              </div>
+            )}
 
             {/* Load More */}
             <div className="text-center mt-10">
