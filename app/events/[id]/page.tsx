@@ -36,7 +36,7 @@ const mockEventsDatabase = [
     time: "9:00 AM - 5:00 PM",
     location: "Kathmandu Convention Center",
     registrationLink: "#",
-    organizer: "Hotel Association of Nepal",
+    organizer: "District Hotel Business Association DHBA",
     expectedAttendees: "500+",
     registrationFee: "NPR 5,000",
     highlights: [
@@ -61,8 +61,8 @@ const mockEventsDatabase = [
   {
     id: "2",
     title: "Tourism Recovery Initiative Launched",
-    excerpt: "UNITY partners with government to boost tourism sector growth",
-    content: `UNITY Hotel Association has launched a comprehensive tourism recovery initiative in partnership with the Nepal Tourism Board. This groundbreaking program aims to revitalize the hospitality sector following recent challenges.
+    excerpt: "DHBA partners with government to boost tourism sector growth",
+    content: `District Hotel Business Association (DHBA) has launched a comprehensive tourism recovery initiative in partnership with Nepal Tourism Board. This groundbreaking program aims to revitalize the hospitality sector following recent challenges.
 
     The initiative includes:
     - Marketing campaigns to promote domestic and international tourism
@@ -82,8 +82,8 @@ const mockEventsDatabase = [
       "/guesthouse-kathmandu-thamel.jpg"
     ],
     time: "11:00 AM",
-    location: "UNITY Headquarters, Kathmandu",
-    organizer: "UNITY Hotel Association",
+    location: "DHBA Headquarters, Kathmandu",
+    organizer: "District Hotel Business Association DHBA",
     expectedAttendees: "N/A",
     registrationFee: "N/A",
     highlights: [
@@ -100,7 +100,7 @@ const mockEventsDatabase = [
       { id: "5", title: "Tourism Safety Alert", date: "2024-10-20" },
     ],
     speakers: [
-      { name: "Bikash Thapa", title: "President, UNITY Hotel Association", image: "/hotel-excellence.jpg" },
+      { name: "Bikash Thapa", title: "President, District Hotel Business Association DHBA", image: "/hotel-excellence.jpg" },
       { name: "Anita Sharma", title: "Director, Nepal Tourism Board", image: "/resort-kathmandu-luxury.jpg" },
     ]
   },
@@ -126,8 +126,8 @@ const mockEventsDatabase = [
       "/guesthouse-kathmandu-thamel.jpg"
     ],
     time: "Published Online",
-    location: "UNITY Website",
-    organizer: "UNITY Hotel Association",
+    location: "DHBA Website",
+    organizer: "District Hotel Business Association DHBA",
     expectedAttendees: "N/A",
     registrationFee: "N/A",
     highlights: [
@@ -170,8 +170,8 @@ const mockEventsDatabase = [
       "/guesthouse-kathmandu-thamel.jpg"
     ],
     time: "10:00 AM - 4:00 PM",
-    location: "UNITY Training Center, Kathmandu",
-    organizer: "UNITY Hotel Association",
+    location: "DHBA Training Center, Kathmandu",
+    organizer: "District Hotel Business Association DHBA",
     expectedAttendees: "50",
     registrationFee: "NPR 2,500",
     highlights: [
@@ -188,7 +188,7 @@ const mockEventsDatabase = [
       { id: "6", title: "International Guest Exchange Program", date: "2024-10-15" },
     ],
     speakers: [
-      { name: "Ramesh Koirala", title: "Training Director, UNITY", image: "/hotel-excellence.jpg" },
+      { name: "Ramesh Koirala", title: "Training Director, DHBA", image: "/hotel-excellence.jpg" },
       { name: "Maya Gurung", title: "HR Manager, 5-Star Hotel", image: "/resort-kathmandu-luxury.jpg" },
     ]
   },
@@ -208,7 +208,7 @@ const mockEventsDatabase = [
 
     Compliance Deadline: November 15, 2024
 
-    Non-compliance may result in penalties and possible suspension of membership privileges. UNITY will conduct random inspections to ensure adherence to these guidelines.`,
+    Non-compliance may result in penalties and possible suspension of membership privileges. DHBA will conduct random inspections to ensure adherence to these guidelines.`,
     date: "2024-10-20",
     category: "Alerts",
     image: "/guesthouse-kathmandu-thamel.jpg",
@@ -220,7 +220,7 @@ const mockEventsDatabase = [
     ],
     time: "Immediate Effect",
     location: "All Member Hotels",
-    organizer: "UNITY Safety Committee",
+    organizer: "DHBA Safety Committee",
     expectedAttendees: "All Members",
     registrationFee: "N/A",
     highlights: [
@@ -242,7 +242,7 @@ const mockEventsDatabase = [
     id: "6",
     title: "International Guest Exchange Program",
     excerpt: "Networking opportunity with global hospitality professionals",
-    content: `UNITY is pleased to announce the International Guest Exchange Program, bringing together hospitality professionals from around the world for knowledge sharing and networking.
+    content: `District Hotel Business Association (DHBA) is pleased to announce the International Guest Exchange Program, bringing together hospitality professionals from around the world for knowledge sharing and networking.
 
     Program Highlights:
     - Delegates from 15 countries participating
@@ -264,7 +264,7 @@ const mockEventsDatabase = [
     ],
     time: "9:00 AM - 9:00 PM",
     location: "Hotel Radisson Blu, Kathmandu",
-    organizer: "UNITY International Relations Committee",
+    organizer: "DHBA International Relations Committee",
     expectedAttendees: "200",
     registrationFee: "NPR 3,000",
     highlights: [

@@ -1,0 +1,148 @@
+{
+  "organization": {
+    "name": "District Hotel Business Association DHBA",
+    "shortName": "DHBA",
+    "address": "Balaju, 16, Kathmandu",
+    "phone": "01-4981882 / 9851040296",
+    "email": "ktmhotelbusinessassociation@gmail.com",
+    "hours": "Sun-Fri: 9:00 AM - 5:00 PM",
+    "closedDay": "Saturday: Closed"
+  },
+  "hero": {
+    "badge": "Get In Touch",
+    "title": "Connect With District Hotel<br />Business Association DHBA",
+    "subtitle": "We're here to support your hospitality journey. Reach out to us for membership, partnerships, or any inquiries.",
+    "features": [
+      {
+        "icon": "MessageSquare",
+        "text": "Quick Response"
+      },
+      {
+        "icon": "Users", 
+        "text": "Expert Support"
+      },
+      {
+        "icon": "Building",
+        "text": "500+ Members"
+      }
+    ]
+  },
+  "contactInfo": [
+    {
+      "icon": "MapPin",
+      "title": "Visit Our Office",
+      "details": "Balaju, 16, Kathmandu",
+      "description": "Strategically located in heart of Kathmandu's hospitality district",
+      "color": "from-blue-500 to-cyan-500"
+    },
+    {
+      "icon": "Phone",
+      "title": "Call Us", 
+      "details": "01-4981882 / 9851040296",
+      "description": "Available during business hours for immediate assistance",
+      "color": "from-green-500 to-emerald-500"
+    },
+    {
+      "icon": "Mail",
+      "title": "Email Us",
+      "details": "ktmhotelbusinessassociation@gmail.com", 
+      "description": "Send us your inquiries and we'll respond promptly",
+      "color": "from-purple-500 to-pink-500"
+    },
+    {
+      "icon": "Clock",
+      "title": "Office Hours",
+      "details": "Sun-Fri: 9:00 AM - 5:00 PM",
+      "description": "Saturday: Closed",
+      "color": "from-orange-500 to-red-500"
+    }
+  ],
+  "departments": [
+    {
+      "title": "Membership Inquiries",
+      "phone": "01-4981882",
+      "email": "ktmhotelbusinessassociation@gmail.com"
+    },
+    {
+      "title": "Partnership Opportunities", 
+      "phone": "01-4981882",
+      "email": "ktmhotelbusinessassociation@gmail.com"
+    },
+    {
+      "title": "Technical Support",
+      "phone": "9851040296", 
+      "email": "ktmhotelbusinessassociation@gmail.com"
+    },
+    {
+      "title": "General Inquiries",
+      "phone": "01-4981882",
+      "email": "ktmhotelbusinessassociation@gmail.com"
+    }
+  ],
+  "form": {
+    "title": "Send Us a Message",
+    "subtitle": "Fill out the form below and our team will get back to you as soon as possible.",
+    "fields": {
+      "name": {
+        "label": "Full Name",
+        "placeholder": "Enter your full name",
+        "required": true
+      },
+      "organization": {
+        "label": "Organization", 
+        "placeholder": "Your hotel/organization name",
+        "required": false
+      },
+      "email": {
+        "label": "Email Address",
+        "placeholder": "your@email.com", 
+        "required": true
+      },
+      "subject": {
+        "label": "Subject",
+        "options": [
+          { "value": "", "text": "Select a subject" },
+          { "value": "membership", "text": "Membership Inquiry" },
+          { "value": "partnership", "text": "Partnership Opportunity" },
+          { "value": "support", "text": "Technical Support" },
+          { "value": "feedback", "text": "Feedback & Suggestions" },
+          { "value": "complaint", "text": "Complaints" },
+          { "value": "other", "text": "Other" }
+        ],
+        "required": true
+      },
+      "message": {
+        "label": "Message",
+        "placeholder": "Tell us more about your inquiry...",
+        "required": true,
+        "rows": 5
+      }
+    },
+    "submitText": "Send Message",
+    "successMessage": {
+      "title": "Message Sent Successfully!",
+      "text": "Thank you for reaching out. Our team will respond within 24 hours."
+    }
+  },
+  "map": {
+    "title": "Find Our Office",
+    "embedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.4567890123456!2d85.3508272!3d27.7058835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1981e4290e07:0xf62e653d652cfb9d!2sPalagya+Hotel!5e0!3m2!1sen!2snp",
+    "features": [
+      {
+        "icon": "MapPin",
+        "title": "Strategic Location",
+        "description": "Centrally located in Kathmandu's hospitality hub"
+      },
+      {
+        "icon": "Clock", 
+        "title": "Business Hours",
+        "description": "Sunday-Friday: 9AM-5PM, Saturday: Closed"
+      },
+      {
+        "icon": "Phone",
+        "title": "Call Ahead", 
+        "description": "01-4981882 / 9851040296 for appointments"
+      }
+    ]
+  }
+}

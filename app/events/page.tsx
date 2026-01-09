@@ -21,7 +21,7 @@ const mockEvents = [
   {
     id: "2",
     title: "Tourism Recovery Initiative Launched",
-    excerpt: "UNITY partners with government to boost tourism sector growth",
+    excerpt: "DHBA partners with government to boost tourism sector growth",
     content: "A comprehensive initiative to revitalize the tourism industry...",
     date: "2024-11-10",
     category: "News",
@@ -57,7 +57,7 @@ const mockEvents = [
   {
     id: "6",
     title: "International Guest Exchange Program",
-    excerpt: "Networking opportunity with global hospitality professionals",
+    excerpt: "DHBA networking opportunity with global hospitality professionals",
     content: "Connect with hotel professionals from around the world...",
     date: "2024-10-15",
     category: "Events",

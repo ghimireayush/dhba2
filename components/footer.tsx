@@ -19,15 +19,16 @@ export function Footer() {
               <div className="relative h-12 w-auto flex items-center justify-center flex-shrink-0">
                 <Image
                   src="/ektalogo.png"
-                  alt="Ekata Hotel"
+                  alt="DHBA"
                   width={120}
                   height={48}
                   className="h-12 w-auto max-w-[120px] object-contain"
                 />
               </div>
               <div className="hidden sm:block">
-                <span className="text-base font-bold text-foreground leading-tight">United Hotel and Guest House Professionals <br/>  Association, Nepal</span>
-                
+                <span className="text-base font-bold text-foreground leading-tight">
+                  {t("footer.orgName")}<br/>{t("footer.country")}
+                </span>
               </div>
             </div>
             <p className="text-foreground/70 text-sm leading-relaxed">{t("footer.brand")}</p>
@@ -85,14 +86,16 @@ export function Footer() {
                 <Phone size={18} className="text-accent flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="text-xs text-muted-foreground">{t("footer.phone")}</p>
-                   <a href="tel:+97714586327" className="text-muted-foreground">+977 01-4586327</a>
+                   <a href="tel:+977014981882" className="text-muted-foreground">+977 01-4981882</a>
+                   <br/>
+                   <a href="tel:+9779851040296" className="text-muted-foreground">+977 9851040296</a>
                 </div>
               </li>
               <li className="flex gap-3 items-start">
                 <Mail size={18} className="text-accent flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="text-xs text-muted-foreground">{t("footer.email")}</p>  
-                  <a href="mailto:ekatahotel2069@gmail.com" className="text-foreground/90 text-sm font-medium">ekatahotel2069@gmail.com</a>
+                  <a href="mailto:ktmhotelbusinessassociation@gmail.com" className="text-foreground/90 text-sm font-medium">ktmhotelbusinessassociation@gmail.com</a>
                 </div>
               </li>
               <li className="flex gap-3 items-start">
@@ -105,7 +108,7 @@ export function Footer() {
                     rel="noopener noreferrer"
                     className="text-foreground/90 text-sm font-medium hover:text-primary transition-colors"
                   >
-                    Airport Area, Kathmandu, Nepal
+                    Balaju-16, Kathmandu
                   </a>
                 </div>
               </li>
@@ -121,7 +124,7 @@ export function Footer() {
         {/* Divider */}
         <div className="flex flex-col items-center justify-center text-center gap-6">
   <p className="text-foreground/60 text-sm">
-    © {currentYear} United Hotel and Guest House Professionals Association, Nepal. {t("footer.rights")}
+    © {currentYear} District Hotel Business  Association {t("footer.rights")}
   </p>
 </div>
 

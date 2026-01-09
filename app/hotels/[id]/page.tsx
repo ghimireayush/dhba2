@@ -77,7 +77,7 @@ export default function HotelDetailPage({ params }: { params: { id: string } }) 
                       ))}
                     </div>
                     <span className="text-muted-foreground">
-                      {mockHotel.hotelType} • {mockHotel.membershipStatus === "active" && "✓ UNITY Member"}
+                      {mockHotel.hotelType} • {mockHotel.membershipStatus === "active" && "✓ DHBA Member"}
                     </span>
                   </div>
                 </div>

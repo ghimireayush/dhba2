@@ -10,9 +10,9 @@ const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "United Hotel and Guest House Professionals Association, Nepal",
+  title: "DHBA - District Hotel Business Association, Nepal",
   description:
-    "Discover hotels, destinations, and events in Kathmandu through United Hotel and Guest House Professionals Association, Nepal.",
+    "Discover hotels, destinations, and events in Kathmandu through DHBA - District Hotel Business Association, Nepal.",
   generator: "v0.app",
   icons: {
     icon: [

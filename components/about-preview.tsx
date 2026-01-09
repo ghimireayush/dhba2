@@ -4,10 +4,15 @@ import Link from "next/link"
 import Image from "next/image"
 import { Phone } from "lucide-react"
 import { useLanguage } from "@/contexts/language-context"
+import { workingCommittee } from "@/lib/committee-data"
 
 
 export function AboutPreview() {
   const { t } = useLanguage()
+  
+  // Get president data from committee
+  const president = workingCommittee.find(member => member.position === "President")
+  
   return (
     <section className="py-16 px-4 sm:px-6 lg:px-8 bg-background">
       <div className="max-w-6xl mx-auto">
@@ -15,7 +20,7 @@ export function AboutPreview() {
           {/* Left Text Section */}
           <div>
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-6">
-              United Hotel and Guest House Professionals Association
+              DHBA - District Hotel Business Association
             </h2>
             <p className="text-lg text-muted-foreground mb-4 leading-relaxed text-justify">
               {t("about.previewDescription")}
@@ -43,8 +48,8 @@ export function AboutPreview() {
                 <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary to-accent p-0.5">
                   <div className="w-full h-full rounded-full overflow-hidden bg-card">
                     <Image
-                      src="/members/sarojale.jpeg"
-                      alt="Mr. Saroj Ale"
+                      src={president?.photo || "/members/default.png"}
+                      alt={president?.name || "President"}
                       width={160}
                       height={160}
                       className="w-full h-full object-cover"
@@ -55,25 +60,27 @@ export function AboutPreview() {
 
               {/* Position */}
               <p className="text-xs font-semibold text-amber-600/80 dark:text-amber-400/80 uppercase tracking-wider mb-2">
-                President
+                {president?.position || "President"}
               </p>
               
               {/* Name */}
               <h4 className="text-base font-bold text-foreground mb-4">
-                Mr. Saroj Ale
+                {president?.name || "President Name"}
               </h4>
 
               {/* Contact */}
-              <div className="flex items-center justify-center gap-2 pt-4 border-t border-border/30">
-                <Phone className="w-4 h-4 text-amber-500/70" />
-                <a href="tel:+9779851170835" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  +977 9851170835
-                </a>
-              </div>
+              {president?.phone && (
+                <div className="flex items-center justify-center gap-2 pt-4 border-t border-border/30">
+                  <Phone className="w-4 h-4 text-amber-500/70" />
+                  <a href={`tel:+977${president.phone.replace(/[^0-9]/g, '')}`} className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                    +977 {president.phone}
+                  </a>
+                </div>
+              )}
 
               {/* Quote */}
               <p className="text-sm text-muted-foreground italic mt-4 pt-4 border-t border-border/30">
-                "Through unity, professionalism, and innovation, we can elevate Kathmandu's reputation as a world-class destination."
+                "Through DHBA, professionalism, and innovation, we can elevate Kathmandu's reputation as a world-class destination."
               </p>
             </div>
           </div>

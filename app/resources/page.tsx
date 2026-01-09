@@ -56,8 +56,8 @@ export default function ResourcesPage() {
     {
       id: 5,
       category: "Document",
-      title: "UNITY Membership Guidelines",
-      description: "Complete guide to UNITY membership benefits, requirements, and application process.",
+      title: "DHBA Membership Guidelines",
+      description: "Complete guide to DHBA membership benefits, requirements, and application process.",
       image: "/hotelassociation-logo.jpg",
       date: "2024-12-15",
       type: "PDF Document",

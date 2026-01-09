@@ -5,17 +5,17 @@ import { Footer } from "@/components/footer"
 import { Breadcrumb } from "@/components/breadcrumb"
 import { Phone, MapPin, Mail, Users, Target, Lightbulb, Award, Calendar, Star, Heart, Globe, Shield } from "lucide-react"
 import { useLanguage } from "@/contexts/language-context"
-import { workingCommittee, advisors, employees } from "@/lib/committee-data"
+import { workingCommittee, members } from "@/lib/committee-data"
 import Image from "next/image"
 
 export default function AboutPage() {
   const { t } = useLanguage()
   
   const stats = [
-    { number: "500+", label: "Member Hotels", icon: Users },
+    { number: "7", label: "Hotel Associations", icon: Users },
     { number: "8", label: "Key Locations", icon: MapPin },
-    { number: "12+", label: "Years of Service", icon: Calendar },
-    { number: "1000s", label: "Tourists Served", icon: Globe }
+    { number: "2074 B.S.", label: "Established", icon: Calendar },
+    { number: "1000s", label: "Member Hotels", icon: Globe }
   ]
 
   return (
@@ -36,14 +36,14 @@ export default function AboutPage() {
           <div className="relative max-w-6xl mx-auto text-center">
             <div className="mb-6">
               <span className="inline-block px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-semibold mb-4">
-                Established 2069 B.S.
+                Established 2074 B.S.
               </span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-              Unity Hotel & Guest House<br />Professional Association
+              District Hotel Business<br />Association Kathmandu
             </h1>
             <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Pioneering excellence in Kathmandu's hospitality sector through unity, innovation, and sustainable growth
+              DHBA for excellence in Kathmandu's hospitality sector through collaboration, advocacy, and sustainable growth
             </p>
             
             {/* Stats */}
@@ -72,19 +72,19 @@ export default function AboutPage() {
                     About Us
                   </span>
                   <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                    Leading Kathmandu's Hospitality Revolution
+                    Leading Kathmandu's Hospitality DHBA Front
                   </h2>
                 </div>
                 
                 <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
                   <p>
-                    Unity Hotel and Guest House Professional Association of Nepal stands as the cornerstone of Kathmandu's thriving hospitality landscape. Since our establishment in 2069 B.S., we have been the unwavering voice and collective strength for hundreds of hotels and guest houses across the valley.
+                    The District Hotel Business Association Kathmandu (DHBA) is a dedicated organization representing the hospitality sector in Kathmandu. Established in 2074 B.S., DHBA serves as the umbrella organization for seven active hotel business associations (units) operating in key areas of Kathmandu, including <strong>Kalanki</strong>, <strong>Sundhara</strong>, <strong>Bagbazar</strong>, <strong>Koteshwor</strong>, <strong>Airport</strong>, <strong>Chabahil</strong>, <strong>New Bus Park</strong>, and <strong>Balaju</strong>.
                   </p>
                   <p>
-                    Our strategic presence in key tourism hubs—including <strong>Naya Basti Tilaganga</strong>, <strong>Airport Sinamangal</strong>, <strong>Gausala Pingalasthan</strong>, <strong>Gyaneshwor</strong>, <strong>Sukedhara</strong>, <strong>Chakrapath</strong>, <strong>Basundhara</strong>, and <strong>Lazimpat</strong>—positions us at the heart of Nepal's tourism gateway.
+                    Our association is committed to fostering growth, collaboration, and excellence in the hotel industry by uniting hotel owners, managers, and hospitality professionals to enhance service quality, promote tourism, and advocate for the interests of our members. With our central office located in Balaju, Kathmandu, we work closely with tourism authorities, government bodies, and industry stakeholders to ensure that our members receive the necessary support and opportunities for growth.
                   </p>
                   <p>
-                    We are more than an association; we are a family of hospitality professionals dedicated to elevating Kathmandu's status as a world-class destination while preserving our rich cultural heritage and ensuring sustainable growth for all stakeholders.
+                    DHBA actively works to protect and promote the professional rights of hoteliers, advocating for favorable government policies, coordinating with relevant authorities on matters of peace and security, contributing to the state through taxation, and collaborating with local bodies to create a business-friendly environment. Additionally, we conduct regular training and workshops to enhance the skills and knowledge of hoteliers. We welcome all hotels, lodges, and guesthouses to join us in making Kathmandu a premier hospitality destination. Together, we strive to elevate industry standards and contribute to Nepal's tourism-driven economy.
                   </p>
                 </div>
                 
@@ -112,8 +112,8 @@ export default function AboutPage() {
                         <Phone className="w-6 h-6 text-primary" />
                       </div>
                       <div>
-                        <div className="text-sm text-muted-foreground">24/7 Support</div>
-                        <div className="font-semibold text-foreground">+977 01-4586327</div>
+                        <div className="text-sm text-muted-foreground">Phone</div>
+                        <div className="font-semibold text-foreground">+977 01-4981882</div>
                       </div>
                     </div>
                     
@@ -123,7 +123,7 @@ export default function AboutPage() {
                       </div>
                       <div>
                         <div className="text-sm text-muted-foreground">Email Us</div>
-                        <div className="font-semibold text-foreground">ekatahotel2069@gmail.com</div>
+                        <div className="font-semibold text-foreground">ktmhotelbusinessassociation@gmail.com</div>
                       </div>
                     </div>
                     
@@ -133,7 +133,7 @@ export default function AboutPage() {
                       </div>
                       <div>
                         <div className="text-sm text-muted-foreground">Visit Us</div>
-                        <div className="font-semibold text-foreground">Kathmandu, Nepal</div>
+                        <div className="font-semibold text-foreground">Balaju-16, Kathmandu</div>
                       </div>
                     </div>
                   </div>
@@ -141,10 +141,10 @@ export default function AboutPage() {
                   <div className="mt-8 p-6 bg-gradient-to-r from-amber-50 to-yellow-50 dark:from-amber-900/20 dark:to-yellow-900/20 rounded-xl border border-amber-200/50">
                     <div className="flex items-center gap-3 mb-2">
                       <Star className="w-5 h-5 text-amber-600" />
-                      <span className="font-semibold text-amber-800 dark:text-amber-200">Excellence Since 2069</span>
+                      <span className="font-semibold text-amber-800 dark:text-amber-200">Excellence Since 2074</span>
                     </div>
                     <p className="text-sm text-amber-700 dark:text-amber-300">
-                      Over a decade of dedicated service to Nepal's hospitality industry
+                      Committed service to Nepal's hospitality industry
                     </p>
                   </div>
                 </div>
@@ -158,10 +158,10 @@ export default function AboutPage() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
               <span className="inline-block px-4 py-2 bg-primary/20 text-primary rounded-full text-sm font-semibold mb-4">
-                President's Message
+                Message from The Chairperson
               </span>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-                A Vision of Unity & Excellence
+                A Vision of Hospitality Excellence & Collaboration
               </h2>
             </div>
             
@@ -179,16 +179,10 @@ export default function AboutPage() {
                     
                     <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
                       <p>
-                        It is with profound honor and unwavering commitment that I serve as President of the Unity Hotel and Guest House Professional Association, Nepal. Our association stands as a beacon of excellence in Kathmandu's vibrant hospitality landscape—a sector that forms the backbone of Nepal's tourism industry.
+                        As President of the District Hotel Business Association Kathmandu, I am honored to lead an organization committed to the growth and excellence of our hospitality industry. Kathmandu, as Nepal's tourism hub, is home to a diverse range of hotels catering to global travelers. Our association advocates for hotel owners' rights, upholds service standards, and collaborates with tourism authorities to enhance the industry's overall development.
                       </p>
                       <p>
-                        In my capacity as your President, I have witnessed firsthand the incredible resilience, innovation, and dedication that defines our members. From the bustling streets of Airport Sinamangal to the cultural heart of Gyaneshwor, our member establishments are not just businesses—they are ambassadors of Nepali hospitality, custodians of our rich culture, and pillars of our local economy.
-                      </p>
-                      <p>
-                        Our mission extends far beyond mere representation. We are architects of sustainable tourism, champions of quality standards, and facilitators of collective growth. Through strategic advocacy, professional development, and community engagement, we are building a future where Kathmandu stands as South Asia's premier hospitality destination.
-                      </p>
-                      <p>
-                        I call upon every hotelier and hospitality professional to actively participate in our initiatives. Together, we can overcome challenges, seize opportunities, and create an ecosystem where excellence thrives, traditions are preserved, and innovation flourishes.
+                        I encourage all hoteliers to actively engage with DHBA's initiatives and utilize our resources to strengthen their businesses. Through collaboration, professionalism, and innovation, we can elevate Kathmandu's reputation as a world-class destination while contributing to Nepal's tourism growth.
                       </p>
                     </div>
                     
@@ -198,9 +192,9 @@ export default function AboutPage() {
                           <Award className="w-8 h-8 text-white" />
                         </div>
                         <div>
-                          <p className="font-bold text-xl text-foreground">Mr. Saroj Ale</p>
+                          <p className="font-bold text-xl text-foreground">Mr. Suresh Baral</p>
                           <p className="text-primary font-semibold">President</p>
-                          <p className="text-sm text-muted-foreground">Unity Hotel & Guest House Professional Association, Nepal</p>
+                          <p className="text-sm text-muted-foreground">District Hotel Business Association Kathmandu</p>
                         </div>
                       </div>
                     </div>
@@ -221,7 +215,7 @@ export default function AboutPage() {
                   <Target className="w-8 h-8 text-blue-600 mb-3" />
                   <h4 className="font-bold text-blue-800 dark:text-blue-200 mb-2">Strategic Vision</h4>
                   <p className="text-sm text-blue-700 dark:text-blue-300">
-                    Building a unified voice for Kathmandu's hospitality community
+                    Building a collective voice for Kathmandu's hospitality community
                   </p>
                 </div>
                 
@@ -261,7 +255,7 @@ export default function AboutPage() {
                   </div>
                   <h3 className="text-2xl font-bold text-foreground mb-4">Our Mission</h3>
                   <p className="text-muted-foreground leading-relaxed mb-6">
-                    To unite and empower Kathmandu's hospitality professionals through advocacy, education, and collaboration, fostering an ecosystem of excellence that benefits our members, guests, and the broader community.
+                    To bring together and empower Kathmandu's hospitality professionals through advocacy, education, and collaboration, fostering an ecosystem of excellence that benefits our members, guests, and the broader community.
                   </p>
                   <ul className="space-y-3">
                     <li className="flex items-start gap-3">
@@ -320,7 +314,7 @@ export default function AboutPage() {
                   <ul className="space-y-3">
                     <li className="flex items-start gap-3">
                       <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                      <span className="text-sm text-muted-foreground"><strong>Unity:</strong> Strength in collaboration</span>
+                      <span className="text-sm text-muted-foreground"><strong>Collaboration:</strong> Strength in partnership</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
@@ -432,79 +426,19 @@ export default function AboutPage() {
               })}
             </div>
 
-            {/* Advisors Section */}
+            {/* Members Section */}
             <div className="text-center mb-16">
               <div className="inline-block mb-4">
-                <span className="text-primary font-semibold text-sm tracking-widest uppercase">Guidance</span>
+                <span className="text-primary font-semibold text-sm tracking-widest uppercase">Team</span>
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Honorary Advisors</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Committee Members</h2>
               <p className="text-muted-foreground max-w-3xl mx-auto text-lg">
-                Esteemed experts providing strategic guidance and wisdom to shape our association's future
-              </p>
-            </div>
-
-            <div className="flex flex-wrap justify-center gap-8 mb-20">
-              {advisors.map((member, index) => (
-                <div
-                  key={index}
-                  className="group relative bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-border/50 hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 w-full sm:w-[calc(50%-1rem)] md:w-[calc(33.333%-1.5rem)] lg:w-[calc(25%-1.5rem)] max-w-[280px]"
-                >
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  
-                  <div className="p-8 relative z-10">
-                    <div className="flex flex-col items-center text-center mb-6">
-                      {/* Member Photo */}
-                      <div className="relative w-32 h-32 mb-6 group-hover:scale-110 transition-transform duration-500">
-                        <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary to-accent p-1 shadow-lg">
-                          <div className="w-full h-full rounded-full overflow-hidden bg-white dark:bg-slate-900">
-                            <Image
-                              src={member.photo || "/placeholder-user.jpg"}
-                              alt={member.name}
-                              width={128}
-                              height={128}
-                              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                      
-                      <p className="text-xs font-bold text-primary uppercase tracking-wider mb-3" dangerouslySetInnerHTML={{ __html: member.position }}></p>
-                      <h4 className="text-base font-bold text-foreground group-hover:text-primary transition-colors duration-500">
-                        {member.name}
-                      </h4>
-                    </div>
-
-                    {member.phone && (
-                      <div className="flex items-center justify-center gap-3 pt-6 border-t border-border/30">
-                        <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-                          <Phone className="w-4 h-4 text-primary" />
-                        </div>
-                        <a
-                          href={`tel:+977${member.phone}`}
-                          className="text-sm text-muted-foreground hover:text-primary transition-colors duration-300 group-hover:font-medium"
-                        >
-                          +977 {member.phone}
-                        </a>
-                      </div>
-                    )}
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Employees Section */}
-            <div className="text-center mb-12">
-              <div className="inline-block mb-4">
-                <span className="text-primary font-semibold text-sm tracking-widest uppercase">Support</span>
-              </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Dedicated Staff</h2>
-              <p className="text-muted-foreground max-w-3xl mx-auto text-lg">
-                The backbone of our association, ensuring smooth operations and exceptional member services
+                Dedicated members contributing to the growth and success of our association
               </p>
             </div>
 
             <div className="flex flex-wrap justify-center gap-8">
-              {employees.map((member, index) => (
+              {members.map((member, index) => (
                 <div
                   key={index}
                   className="group relative bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-border/50 hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 w-full sm:w-[calc(50%-1rem)] md:w-[calc(33.333%-1.5rem)] lg:w-[calc(25%-1.5rem)] max-w-[280px]"

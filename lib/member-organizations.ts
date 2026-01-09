@@ -65,8 +65,8 @@ export const memberOrganizations = [
   },
   {
     id: "united-hotel-guesthouse",
-    name: "United Hotel and Guest House Professionals Association",
-    shortName: "United HGH",
+    name: "DHBA - District Hotel Business Association",
+    shortName: "DHBA",
     committee: [
       { role: "President", name: "Mohan Lama", phone: "9852456789" },
       { role: "Vice President", name: "Anita Sherpa", phone: "9852567890" },
