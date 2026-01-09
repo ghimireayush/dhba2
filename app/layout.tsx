@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: "/ektalogo.png",
+        url: "/dbha.png",
         type: "image/png",
       },
       {
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
         sizes: "any",
       },
     ],
-    apple: "/ektalogo.png",
+    apple: "/dbha.png",
   },
 }
 
@@ -38,7 +38,7 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <head>
         <link rel="manifest" href="/site.webmanifest" />
-        <link rel="icon" href="/ektalogo.png" type="image/png" />
+        <link rel="icon" href="/dbha.png" type="image/png" />
         <link rel="shortcut icon" href="/favicon.ico" />
         <meta name="theme-color" content="#1a472a" />
       </head>

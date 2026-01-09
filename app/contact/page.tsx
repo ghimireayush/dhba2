@@ -115,7 +115,7 @@ export default function ContactPage() {
                         <Icon className="w-8 h-8 text-white" />
                       </div>
                       <h3 className="text-xl font-bold text-foreground mb-3">{contact.title}</h3>
-                      <p className="text-primary font-semibold mb-2">{contact.details}</p>
+                      <p className="text-primary font-semibold mb-2 break-words">{contact.details}</p>
                       <p className="text-sm text-muted-foreground leading-relaxed">{contact.description}</p>
                     </div>
                   </div>

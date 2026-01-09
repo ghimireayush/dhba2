@@ -20,7 +20,7 @@ export function HeroSection() {
       id: 1,
       title: "About Us",
       description: "Representing hospitality sector since 2069 B.S.",
-      image: "/ektalogo.png",
+      image: "/dbha.png",
       link: "/about",
     },
     {

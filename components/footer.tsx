@@ -18,7 +18,7 @@ export function Footer() {
             <div className="flex items-center gap-3 mb-6">
               <div className="relative h-12 w-auto flex items-center justify-center flex-shrink-0">
                 <Image
-                  src="/ektalogo.png"
+                  src="/dbha.png"
                   alt="DHBA"
                   width={120}
                   height={48}

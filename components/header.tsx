@@ -36,7 +36,7 @@ export function Header() {
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
               <Image
-                src="/ektalogo.png"
+                src="/dbha.png"
                 alt="District Hotel Business Association Kathmandu"
                 width={150}
                 height={40}
@@ -106,7 +106,7 @@ export function Header() {
         <div className="flex items-center justify-between h-14">
           <Link href="/" className="flex items-center">
             <Image
-              src="/ektalogo.png"
+              src="/dbha.png"
               alt="District Hotel Business Association Kathmandu"
               width={120}
               height={30}
