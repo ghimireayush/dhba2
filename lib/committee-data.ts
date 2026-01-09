@@ -32,7 +32,7 @@ export const members: Member[] = [
   { name: "Mr. Khemraj Upreti", position: "Member", phone: "9841814655", photo: "/members/KhemrajUpreti.png" },
   { name: "Mr. Madhav Prasad Gautam", position: "Member", phone: "9855068315", photo: "/members/MadhabGautam.png" },
   { name: "Mr. Sher Bahadur Bista", position: "Member", phone: "9844904684", photo: "/members/SherBahadurBista.png" },
-  { name: "Mr. Sharada Khadka", position: "Member", phone: "9849425774", photo: "/members/SharadaKhadka.png" },
+  { name: "Ms. Sharada Khadka", position: "Member", phone: "9849425774", photo: "/members/SharadaKhadka.png" },
   { name: "Mr. Dil Bahadur Kshetri", position: "Member", phone: "9851082116", photo: "/members/DilBahadurKshetri.png" },
   { name: "Mr. Lalit Bahadur Shrestha", position: "Member", phone: "9841185560", photo: "/members/LalitBahadurShrestha.png" },
   { name: "Ms. Renuka Yasko Limbu", position: "Member", phone: "9849384428", photo: "/members/RenukaYaskoLimbu.png" },
