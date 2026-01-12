@@ -1,63 +1,65 @@
 "use client"
 
-import { motion } from "framer-motion"
 import { Phone, ArrowRight } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 import { useLanguage } from "@/contexts/language-context"
 import { workingCommittee } from "@/lib/committee-data"
+import { useEffect, useState } from "react"
 
 // Top leadership positions to show on homepage (first 4)
 const topLeadership = workingCommittee.slice(0, 4)
 
 export function CentralCommittee() {
   const { t } = useLanguage()
+  const [isVisible, setIsVisible] = useState(false)
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsVisible(true), 100)
+    return () => clearTimeout(timer)
+  }, [])
 
   return (
     <section className="py-20 px-4 md:px-8 bg-gradient-to-b from-background to-secondary/5">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
+        <div
+          className={`text-center mb-16 transition-all duration-700 transform ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          }`}
         >
           <div className="inline-block mb-4">
             <span className="text-primary font-semibold text-sm tracking-widest uppercase">{t("members.title")}</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">{t("home.committee.title")}</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">{t("home.committee.subtitle")}</p>
-        </motion.div>
+        </div>
 
         {/* Top Leadership - Show only 5 key positions */}
         <div className="mb-12">
-          <motion.h3
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="text-2xl font-bold text-primary mb-8 flex items-center gap-3"
+          <h3
+            className={`text-2xl font-bold text-primary mb-8 flex items-center gap-3 transition-all duration-700 transform ${
+              isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'
+            }`}
+            style={{ transitionDelay: '200ms' }}
           >
             <div className="w-1 h-8 bg-gradient-to-b from-primary to-primary/50 rounded-full"></div>
             {t("home.committee.executive")}
-          </motion.h3>
+          </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {topLeadership.map((member, index) => {
               const isPresident = member.position === "President"
               return (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
                   className={`group relative rounded-xl overflow-hidden transition-all duration-300 hover:shadow-xl ${
                     isPresident 
                       ? "bg-white dark:bg-slate-900 border border-amber-300/60 hover:border-amber-400/80" 
                       : "bg-white dark:bg-slate-900 border border-border/50 hover:border-primary/50"
+                  } transform transition-all duration-700 ${
+                    isVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-8 scale-95'
                   }`}
+                  style={{ transitionDelay: `${300 + index * 100}ms` }}
                 >
                   <div className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${
                     isPresident 
@@ -108,19 +110,18 @@ export function CentralCommittee() {
                       </a>
                     </div>
                   </div>
-                </motion.div>
+                </div>
               )
             })}
           </div>
         </div>
 
         {/* View All Button */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          viewport={{ once: true }}
-          className="text-center"
+        <div
+          className={`text-center transition-all duration-700 transform ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          }`}
+          style={{ transitionDelay: '700ms' }}
         >
           <Link
             href="/about"
@@ -129,7 +130,7 @@ export function CentralCommittee() {
             {t("common.viewAll")} {t("members.title")}
             <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform duration-300" />
           </Link>
-        </motion.div>
+        </div>
       </div>
     </section>
   )

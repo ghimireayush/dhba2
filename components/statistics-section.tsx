@@ -1,15 +1,20 @@
 "use client"
 
-import { motion } from "framer-motion"
 import { Users, Building2, Calendar, Award } from "lucide-react"
 import { AnimatedCounter } from "./animated-counter"
 import { useLanguage } from "@/contexts/language-context" 
 import { useRouter } from "next/navigation"
-
+import { useEffect, useState } from "react"
 
 export function StatisticsSection() {
   const { language } = useLanguage()
   const router = useRouter()
+  const [isVisible, setIsVisible] = useState(false)
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsVisible(true), 100)
+    return () => clearTimeout(timer)
+  }, [])
 
   const stats = [
   {
@@ -56,25 +61,25 @@ export function StatisticsSection() {
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
-            <motion.div
+            <div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-
-              viewport={{ once: true }}
               onClick={() => stat.route && router.push(stat.route)}
-              className={`text-center group${
-                stat.route ? " cursor-pointer hover:scale-105 transition-transform" : ""
+              className={`text-center group transition-all duration-700 transform ${
+                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
+              style={{ transitionDelay: `${index * 100}ms` }}
             >
-              <div className="inline-flex items-center justify-center w-16 h-16 mb-4 rounded-2xl bg-gradient-to-br from-primary to-accent text-white group-hover:scale-110 transition-transform duration-300 shadow-lg">
+              <div className={`inline-flex items-center justify-center w-16 h-16 mb-4 rounded-2xl bg-gradient-to-br from-primary to-accent text-white transition-all duration-300 shadow-lg ${
+                stat.route ? " cursor-pointer hover:scale-110" : ""
+              } ${isVisible ? 'scale-100' : 'scale-90'}`}
+              style={{ transitionDelay: `${index * 100 + 200}ms` }}
+              >
                 <stat.icon size={32} />
               </div>
 
               <div className="text-4xl md:text-5xl font-bold text-foreground mb-2">
                 {stat.isDate ? (
-                  <span>{stat.value}</span> // 👈 static date
+                  <span>{stat.value}</span>
                 ) : (
                   <AnimatedCounter
                     end={stat.value}
@@ -87,7 +92,7 @@ export function StatisticsSection() {
               <p className="text-sm md:text-base text-muted-foreground font-medium">
                 {stat.label}
               </p>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
