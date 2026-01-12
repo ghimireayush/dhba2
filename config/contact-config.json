@@ -33,28 +33,28 @@
       "title": "Visit Our Office",
       "details": "Balaju, 16, Kathmandu",
       "description": "Strategically located in heart of Kathmandu's hospitality district",
-      "color": "from-blue-500 to-cyan-500"
+      "color": "from-primary to-secondary"
     },
     {
       "icon": "Phone",
       "title": "Call Us", 
       "details": "01-4981882 / 9851040296",
       "description": "Available during business hours for immediate assistance",
-      "color": "from-green-500 to-emerald-500"
+      "color": "from-secondary to-accent"
     },
     {
       "icon": "Mail",
       "title": "Email Us",
       "details": "ktmhotelbusinessassociation@gmail.com", 
       "description": "Send us your inquiries and we'll respond promptly",
-      "color": "from-purple-500 to-pink-500"
+      "color": "from-accent to-primary"
     },
     {
       "icon": "Clock",
       "title": "Office Hours",
       "details": "Sun-Fri: 9:00 AM - 5:00 PM",
       "description": "Saturday: Closed",
-      "color": "from-orange-500 to-red-500"
+      "color": "from-primary to-accent"
     }
   ],
   "departments": [
