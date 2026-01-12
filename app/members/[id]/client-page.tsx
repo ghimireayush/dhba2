@@ -123,11 +123,11 @@ export default function ClientPage() {
                           }`}>
                             <div className="w-full h-full rounded-full overflow-hidden bg-white dark:bg-slate-900 flex items-center justify-center">
                               <Image
-                                src="/dbha.png"
+                                src={member.photo || "/dbha.png"}
                                 alt={member.name}
                                 width={144}
                                 height={144}
-                                className="w-3/4 h-3/4 object-contain"
+                                className={member.photo ? "w-full h-full object-cover" : "w-3/4 h-3/4 object-contain"}
                               />
                             </div>
                           </div>
@@ -205,11 +205,11 @@ export default function ClientPage() {
                             <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary to-accent p-1 shadow-lg">
                               <div className="w-full h-full rounded-full overflow-hidden bg-white dark:bg-slate-900 flex items-center justify-center">
                                 <Image
-                                  src="/dbha.png"
+                                  src={member.photo || "/dbha.png"}
                                   alt={member.name}
                                   width={128}
                                   height={128}
-                                  className="w-3/4 h-3/4 object-contain"
+                                  className={member.photo ? "w-full h-full object-cover" : "w-3/4 h-3/4 object-contain"}
                                 />
                               </div>
                             </div>

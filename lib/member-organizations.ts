@@ -4,6 +4,7 @@ export interface CommitteeMember {
   role: string
   name: string
   phone: string
+  photo?: string
 }
 
 export interface MemberOrganization {
