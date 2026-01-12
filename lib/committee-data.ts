@@ -9,3 +9,4 @@ export interface Member {
 
 export const workingCommittee: Member[] = committeeData.workingCommittee
 export const members: Member[] = committeeData.members
+export const staff: Member[] = committeeData.staff

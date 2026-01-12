@@ -31,5 +31,6 @@
     { "name": "Ms. Renuka Yasko Limbu", "position": "Member", "phone": "9849384428", "photo": "/members/RenukaYaskoLimbu.png" },
     { "name": "Ms. Sujata Maya Tamang", "position": "Member", "phone": "9849492825", "photo": "/members/SujataMayaTamang.png" },
     { "name": "Ms. Apsara Thapa", "position": "Member", "phone": "9840835193", "photo": "/members/ApsaraThapa.png" }
-  ]
+  ],
+  "staff": []
 }
