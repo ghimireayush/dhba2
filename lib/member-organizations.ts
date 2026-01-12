@@ -7,6 +7,29 @@ export interface CommitteeMember {
   photo?: string
 }
 
+export interface AboutUs {
+  title: string
+  paragraphs: string[]
+  highlights: string[]
+}
+
+export interface PresidentMessage {
+  greeting: string
+  paragraphs: string[]
+  presidentName: string
+  presidentTitle: string
+  organization: string
+}
+
+export interface ContactInfo {
+  phone: string
+  email: string
+  address: string
+  tagline: string
+  taglineDescription: string
+  mapEmbedUrl?: string
+}
+
 export interface MemberOrganization {
   id: string
   name: string
@@ -14,6 +37,9 @@ export interface MemberOrganization {
   description: string
   location: string
   established: string
+  aboutUs?: AboutUs
+  presidentMessage?: PresidentMessage
+  contactInfo?: ContactInfo
   committee: CommitteeMember[]
   advisors?: CommitteeMember[]
   staff?: CommitteeMember[]

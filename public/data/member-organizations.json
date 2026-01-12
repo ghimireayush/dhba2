@@ -7,6 +7,33 @@
       "description": "A collective organization representing hotels and guest houses in the Unity area of Kathmandu.",
       "location": "Kathmandu",
       "established": "2069 B.S.",
+      "aboutUs": {
+        "title": "About Unity HGPA",
+        "paragraphs": [
+          "Unity Hotel and Guest House Professionals Association (Unity HGPA) is a dedicated organization representing the hospitality sector in the Unity area of Kathmandu. Established in 2069 B.S., Unity HGPA serves as a collective voice for hotels and guest houses operating in this vibrant region.",
+          "Our association is committed to fostering growth, collaboration, and excellence in the hotel industry by uniting hotel owners, managers, and hospitality professionals to enhance service quality, promote tourism, and advocate for the interests of our members.",
+          "Unity HGPA actively works to protect and promote the professional rights of hoteliers, advocating for favorable government policies, coordinating with relevant authorities on matters of peace and security, and collaborating with local bodies to create a business-friendly environment."
+        ],
+        "highlights": ["Quality Standards", "Community Focus", "Global Excellence"]
+      },
+      "presidentMessage": {
+        "greeting": "Dear Esteemed Members, Partners, and Valued Stakeholders,",
+        "paragraphs": [
+          "As President of Unity Hotel and Guest House Professionals Association, I am honored to lead an organization committed to the growth and excellence of our hospitality industry. Our association advocates for hotel owners' rights, upholds service standards, and collaborates with tourism authorities to enhance the industry's overall development.",
+          "I encourage all hoteliers to actively engage with our initiatives and utilize our resources to strengthen their businesses. Through collaboration, professionalism, and innovation, we can elevate our reputation as a premier hospitality destination."
+        ],
+        "presidentName": "Mr. Saroj Ale",
+        "presidentTitle": "President",
+        "organization": "Unity Hotel and Guest House Professionals Association"
+      },
+      "contactInfo": {
+        "phone": "+977 01-4981882",
+        "email": "unityhgpa@gmail.com",
+        "address": "Kathmandu, Nepal",
+        "tagline": "Excellence Since 2069",
+        "taglineDescription": "Committed service to Nepal's hospitality industry",
+        "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.5!2d85.32!3d27.71!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0:0x0!2sKathmandu!5e0!3m2!1sen!2snp"
+      },
       "committee": [
         { "role": "President", "name": "Mr. Saroj Ale", "phone": "9851170835", "photo": "/ekatamembers/sarojale.jpeg" },
         { "role": "First Vice President", "name": "Mr. Salman Thaling", "phone": "9851123304", "photo": "/ekatamembers/salmanthaling.png" },
@@ -47,6 +74,33 @@
       "description": "Representing the hospitality sector in Balaju area, committed to excellence in hotel services.",
       "location": "Balaju, Kathmandu",
       "established": "2069 B.S.",
+      "aboutUs": {
+        "title": "About Balaju HBA",
+        "paragraphs": [
+          "Balaju Hotel Business Association (Balaju HBA) is a dedicated organization representing the hospitality sector in the Balaju area of Kathmandu. Established in 2069 B.S., we serve as a collective voice for hotels operating in this important commercial hub.",
+          "Our association is committed to fostering growth, collaboration, and excellence in the hotel industry by uniting hotel owners, managers, and hospitality professionals to enhance service quality and promote tourism.",
+          "Balaju HBA actively works to protect and promote the professional rights of hoteliers, advocating for favorable government policies and collaborating with local bodies to create a business-friendly environment."
+        ],
+        "highlights": ["Quality Standards", "Community Focus", "Global Excellence"]
+      },
+      "presidentMessage": {
+        "greeting": "Dear Esteemed Members, Partners, and Valued Stakeholders,",
+        "paragraphs": [
+          "As President of Balaju Hotel Business Association, I am honored to lead an organization committed to the growth and excellence of our hospitality industry in the Balaju area.",
+          "I encourage all hoteliers to actively engage with our initiatives and utilize our resources to strengthen their businesses. Together, we can elevate our standards and contribute to Nepal's tourism growth."
+        ],
+        "presidentName": "Tika Bahadur Rayamajhi",
+        "presidentTitle": "President",
+        "organization": "Balaju Hotel Business Association"
+      },
+      "contactInfo": {
+        "phone": "+977 9851007831",
+        "email": "balajuhba@gmail.com",
+        "address": "Balaju, Kathmandu",
+        "tagline": "Excellence Since 2069",
+        "taglineDescription": "Committed service to Nepal's hospitality industry",
+        "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3531.8!2d85.30!3d27.73!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0:0x0!2sBalaju%2C+Kathmandu!5e0!3m2!1sen!2snp"
+      },
       "committee": [
         { "role": "President", "name": "Tika Bahadur Rayamajhi", "phone": "9851007831" },
         { "role": "Vice President", "name": "Govinda Marasini", "phone": "9851146651" },
@@ -74,6 +128,33 @@
       "description": "Serving the hospitality community in Kalanki, one of Kathmandu's busiest transit areas.",
       "location": "Kalanki, Kathmandu",
       "established": "2070 B.S.",
+      "aboutUs": {
+        "title": "About Kalanki HGA",
+        "paragraphs": [
+          "Kalanki Hotel and Guest House Association (Kalanki HGA) serves the hospitality community in Kalanki, one of Kathmandu's busiest transit areas. Established in 2070 B.S., we represent hotels and guest houses in this strategic location.",
+          "Our association is committed to fostering growth and excellence in the hotel industry by uniting hospitality professionals to enhance service quality and promote tourism.",
+          "Kalanki HGA actively works to protect the professional rights of hoteliers and collaborates with local bodies to create a business-friendly environment."
+        ],
+        "highlights": ["Quality Standards", "Community Focus", "Global Excellence"]
+      },
+      "presidentMessage": {
+        "greeting": "Dear Esteemed Members, Partners, and Valued Stakeholders,",
+        "paragraphs": [
+          "As President of Kalanki Hotel and Guest House Association, I am honored to lead an organization committed to the growth of our hospitality industry in this busy transit hub.",
+          "Through collaboration and innovation, we can elevate Kalanki's reputation as a premier hospitality destination."
+        ],
+        "presidentName": "Rajesh Kumar Sharma",
+        "presidentTitle": "President",
+        "organization": "Kalanki Hotel and Guest House Association"
+      },
+      "contactInfo": {
+        "phone": "+977 9851234567",
+        "email": "kalankihga@gmail.com",
+        "address": "Kalanki, Kathmandu",
+        "tagline": "Excellence Since 2070",
+        "taglineDescription": "Committed service to Nepal's hospitality industry",
+        "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.9!2d85.28!3d27.69!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0:0x0!2sKalanki%2C+Kathmandu!5e0!3m2!1sen!2snp"
+      },
       "committee": [
         { "role": "President", "name": "Rajesh Kumar Sharma", "phone": "9851234567" },
         { "role": "Vice President", "name": "Priya Patel", "phone": "9851345678" },
@@ -87,6 +168,33 @@
       "description": "The central hotel business association representing hotels in the heart of Kathmandu.",
       "location": "Kathmandu",
       "established": "2065 B.S.",
+      "aboutUs": {
+        "title": "About Kathmandu HBA",
+        "paragraphs": [
+          "Kathmandu Hotel Business Association (Kathmandu HBA) is the central hotel business association representing hotels in the heart of Kathmandu. Established in 2065 B.S., we are one of the oldest hospitality associations in the region.",
+          "Our association is committed to fostering growth, collaboration, and excellence in the hotel industry by uniting hotel owners and hospitality professionals.",
+          "Kathmandu HBA actively works to protect and promote the professional rights of hoteliers, advocating for favorable government policies and industry standards."
+        ],
+        "highlights": ["Quality Standards", "Community Focus", "Global Excellence"]
+      },
+      "presidentMessage": {
+        "greeting": "Dear Esteemed Members, Partners, and Valued Stakeholders,",
+        "paragraphs": [
+          "As President of Kathmandu Hotel Business Association, I am honored to lead an organization committed to the growth and excellence of our hospitality industry in the capital city.",
+          "I encourage all hoteliers to actively engage with our initiatives. Through collaboration and professionalism, we can elevate Kathmandu's reputation as a world-class destination."
+        ],
+        "presidentName": "Suresh Baral",
+        "presidentTitle": "President",
+        "organization": "Kathmandu Hotel Business Association"
+      },
+      "contactInfo": {
+        "phone": "+977 9851567890",
+        "email": "ktmhba@gmail.com",
+        "address": "Kathmandu, Nepal",
+        "tagline": "Excellence Since 2065",
+        "taglineDescription": "Committed service to Nepal's hospitality industry",
+        "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.5!2d85.32!3d27.71!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0:0x0!2sKathmandu!5e0!3m2!1sen!2snp"
+      },
       "committee": [
         { "role": "President", "name": "Suresh Baral", "phone": "9851567890" },
         { "role": "Vice President", "name": "Maya Desai", "phone": "9851678901" },
@@ -100,6 +208,33 @@
       "description": "Dedicated to promoting and supporting guest house businesses across Nepal.",
       "location": "Kathmandu",
       "established": "2068 B.S.",
+      "aboutUs": {
+        "title": "About Nepal GHB",
+        "paragraphs": [
+          "Nepal Guest House Business Association (Nepal GHB) is dedicated to promoting and supporting guest house businesses across Nepal. Established in 2068 B.S., we represent the growing guest house sector.",
+          "Our association is committed to fostering growth and excellence by uniting guest house owners and hospitality professionals to enhance service quality and promote tourism.",
+          "Nepal GHB actively works to protect the professional rights of guest house operators and advocates for favorable policies."
+        ],
+        "highlights": ["Quality Standards", "Community Focus", "Global Excellence"]
+      },
+      "presidentMessage": {
+        "greeting": "Dear Esteemed Members, Partners, and Valued Stakeholders,",
+        "paragraphs": [
+          "As President of Nepal Guest House Business Association, I am honored to lead an organization committed to the growth of guest house businesses across Nepal.",
+          "Through collaboration and innovation, we can elevate the standards of guest house hospitality in Nepal."
+        ],
+        "presidentName": "Vikram Singh Rana",
+        "presidentTitle": "President",
+        "organization": "Nepal Guest House Business Association"
+      },
+      "contactInfo": {
+        "phone": "+977 9851890123",
+        "email": "nepalghb@gmail.com",
+        "address": "Kathmandu, Nepal",
+        "tagline": "Excellence Since 2068",
+        "taglineDescription": "Committed service to Nepal's hospitality industry",
+        "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.5!2d85.32!3d27.71!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0:0x0!2sKathmandu!5e0!3m2!1sen!2snp"
+      },
       "committee": [
         { "role": "President", "name": "Vikram Singh Rana", "phone": "9851890123" },
         { "role": "Vice President", "name": "Deepika Gurung", "phone": "9851901234" },
@@ -113,6 +248,33 @@
       "description": "Representing hotels in the historic Sundhara area of Kathmandu.",
       "location": "Sundhara, Kathmandu",
       "established": "2071 B.S.",
+      "aboutUs": {
+        "title": "About Sundhara HBA",
+        "paragraphs": [
+          "Sundhara Hotel Business Association (Sundhara HBA) represents hotels in the historic Sundhara area of Kathmandu. Established in 2071 B.S., we serve the hospitality sector in this culturally rich location.",
+          "Our association is committed to fostering growth and excellence in the hotel industry while preserving the historic character of the Sundhara area.",
+          "Sundhara HBA actively works to protect the professional rights of hoteliers and promotes sustainable tourism practices."
+        ],
+        "highlights": ["Quality Standards", "Community Focus", "Global Excellence"]
+      },
+      "presidentMessage": {
+        "greeting": "Dear Esteemed Members, Partners, and Valued Stakeholders,",
+        "paragraphs": [
+          "As President of Sundhara Hotel Business Association, I am honored to lead an organization committed to the growth of our hospitality industry in this historic area.",
+          "Through collaboration and professionalism, we can elevate Sundhara's reputation while preserving its cultural heritage."
+        ],
+        "presidentName": "Arjun Verma",
+        "presidentTitle": "President",
+        "organization": "Sundhara Hotel Business Association"
+      },
+      "contactInfo": {
+        "phone": "+977 9852123456",
+        "email": "sundharahba@gmail.com",
+        "address": "Sundhara, Kathmandu",
+        "tagline": "Excellence Since 2071",
+        "taglineDescription": "Committed service to Nepal's hospitality industry",
+        "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.6!2d85.31!3d27.70!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0:0x0!2sSundhara%2C+Kathmandu!5e0!3m2!1sen!2snp"
+      },
       "committee": [
         { "role": "President", "name": "Arjun Verma", "phone": "9852123456" },
         { "role": "Vice President", "name": "Neha Singh", "phone": "9852234567" },
@@ -126,6 +288,33 @@
       "description": "The umbrella organization uniting all hotel business associations in Kathmandu district.",
       "location": "Balaju-16, Kathmandu",
       "established": "2074 B.S.",
+      "aboutUs": {
+        "title": "About DHBA",
+        "paragraphs": [
+          "The District Hotel Business Association Kathmandu (DHBA) is the umbrella organization uniting all hotel business associations in Kathmandu district. Established in 2074 B.S., DHBA serves as the central coordinating body for seven active hotel business associations.",
+          "Our association is committed to fostering growth, collaboration, and excellence in the hotel industry by uniting hotel owners, managers, and hospitality professionals to enhance service quality, promote tourism, and advocate for the interests of our members.",
+          "DHBA actively works to protect and promote the professional rights of hoteliers, advocating for favorable government policies, coordinating with relevant authorities on matters of peace and security, and collaborating with local bodies to create a business-friendly environment."
+        ],
+        "highlights": ["Quality Standards", "Community Focus", "Global Excellence"]
+      },
+      "presidentMessage": {
+        "greeting": "Dear Esteemed Members, Partners, and Valued Stakeholders,",
+        "paragraphs": [
+          "As President of District Hotel Business Association Kathmandu, I am honored to lead an organization committed to the growth and excellence of our hospitality industry. Kathmandu, as Nepal's tourism hub, is home to a diverse range of hotels catering to global travelers.",
+          "I encourage all hoteliers to actively engage with DHBA's initiatives and utilize our resources to strengthen their businesses. Through collaboration, professionalism, and innovation, we can elevate Kathmandu's reputation as a world-class destination."
+        ],
+        "presidentName": "Mohan Lama",
+        "presidentTitle": "President",
+        "organization": "District Hotel Business Association Kathmandu"
+      },
+      "contactInfo": {
+        "phone": "+977 01-4981882",
+        "email": "ktmhotelbusinessassociation@gmail.com",
+        "address": "Balaju-16, Kathmandu",
+        "tagline": "Excellence Since 2074",
+        "taglineDescription": "Committed service to Nepal's hospitality industry",
+        "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.4567890123456!2d85.3508272!3d27.7058835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1981e4290e07:0xf62e653d652cfb9d!2sPalagya+Hotel!5e0!3m2!1sen!2snp"
+      },
       "committee": [
         { "role": "President", "name": "Mohan Lama", "phone": "9852456789" },
         { "role": "Vice President", "name": "Anita Sherpa", "phone": "9852567890" },
@@ -139,6 +328,33 @@
       "description": "Promoting Nepali hospitality standards and supporting local hotel businesses.",
       "location": "Kathmandu",
       "established": "2072 B.S.",
+      "aboutUs": {
+        "title": "About Nepali HBA",
+        "paragraphs": [
+          "Nepali Hotel Business Association (Nepali HBA) is dedicated to promoting Nepali hospitality standards and supporting local hotel businesses. Established in 2072 B.S., we represent the authentic Nepali hospitality sector.",
+          "Our association is committed to fostering growth and excellence in the hotel industry while promoting traditional Nepali hospitality values.",
+          "Nepali HBA actively works to protect the professional rights of hoteliers and advocates for policies that support local businesses."
+        ],
+        "highlights": ["Quality Standards", "Community Focus", "Global Excellence"]
+      },
+      "presidentMessage": {
+        "greeting": "Dear Esteemed Members, Partners, and Valued Stakeholders,",
+        "paragraphs": [
+          "As President of Nepali Hotel Business Association, I am honored to lead an organization committed to promoting authentic Nepali hospitality standards.",
+          "Through collaboration and innovation, we can elevate Nepali hospitality to global standards while preserving our unique cultural identity."
+        ],
+        "presidentName": "Kiran Malla",
+        "presidentTitle": "President",
+        "organization": "Nepali Hotel Business Association"
+      },
+      "contactInfo": {
+        "phone": "+977 9852789012",
+        "email": "nepalihba@gmail.com",
+        "address": "Kathmandu, Nepal",
+        "tagline": "Excellence Since 2072",
+        "taglineDescription": "Committed service to Nepal's hospitality industry",
+        "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.5!2d85.32!3d27.71!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0:0x0!2sKathmandu!5e0!3m2!1sen!2snp"
+      },
       "committee": [
         { "role": "President", "name": "Kiran Malla", "phone": "9852789012" },
         { "role": "Vice President", "name": "Sunita Yadav", "phone": "9852890123" },

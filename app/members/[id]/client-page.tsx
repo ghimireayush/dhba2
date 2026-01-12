@@ -79,6 +79,177 @@ export default function ClientPage() {
             </div>
           </div>
         </section>
+         {/* About Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-background">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <div className="mb-6">
+                  <span className="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-4">
+                    About Us
+                  </span>
+                  <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+                    Leading Kathmandu's Hospitality DHBA Front
+                  </h2>
+                </div>
+                
+                <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
+                  <p>
+                    The District Hotel Business Association Kathmandu (DHBA) is a dedicated organization representing hospitality sector in Kathmandu. Established in 2074 B.S., DHBA serves as umbrella organization for seven active hotel business associations (units) operating in key areas of Kathmandu, including <strong>Kalanki</strong>, <strong>Sundhara</strong>, <strong>Bagbazar</strong>, <strong>Koteshwor</strong>, <strong>Airport</strong>, <strong>Chabahil</strong>, <strong>New Bus Park</strong>, and <strong>Balaju</strong>.
+                  </p>
+                  <p>
+                    Our association is committed to fostering growth, collaboration, and excellence in hotel industry by uniting hotel owners, managers, and hospitality professionals to enhance service quality, promote tourism, and advocate for the interests of our members. With our central office located in Balaju, Kathmandu, we work closely with tourism authorities, government bodies, and industry stakeholders to ensure that our members receive the necessary support and opportunities for growth.
+                  </p>
+                  <p>
+                    DHBA actively works to protect and promote the professional rights of hoteliers, advocating for favorable government policies, coordinating with relevant authorities on matters of peace and security, contributing to the state through taxation, and collaborating with local bodies to create a business-friendly environment. Additionally, we conduct regular training and workshops to enhance the skills and knowledge of hoteliers. We welcome all hotels, lodges, and guesthouses to join us in making Kathmandu a premier hospitality destination. Together, we strive to elevate industry standards and contribute to Nepal's tourism-driven economy.
+                  </p>
+                </div>
+                
+                <div className="grid grid-cols-3 gap-4 mt-8">
+                  <div className="text-center p-4 bg-primary/5 rounded-lg">
+                    <Star className="w-8 h-8 text-primary mx-auto mb-2" />
+                    <div className="text-sm font-semibold">Quality Standards</div>
+                  </div>
+                  <div className="text-center p-4 bg-accent/5 rounded-lg">
+                    <Star className="w-8 h-8 text-accent mx-auto mb-2" />
+                    <div className="text-sm font-semibold">Community Focus</div>
+                  </div>
+                  <div className="text-center p-4 bg-primary/5 rounded-lg">
+                    <Star className="w-8 h-8 text-primary mx-auto mb-2" />
+                    <div className="text-sm font-semibold">Global Excellence</div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="relative">
+                <div className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl p-8 border border-primary/20">
+                  <div className="space-y-6">
+                    <div className="flex items-center gap-4">
+                      <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center">
+                        <Phone className="w-6 h-6 text-primary" />
+                      </div>
+                      <div>
+                        <div className="text-sm text-muted-foreground">Phone</div>
+                        <div className="font-semibold text-foreground">+977 01-4981882</div>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-center gap-4">
+                      <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center">
+                        <Phone className="w-6 h-6 text-primary" />
+                      </div>
+                      <div>
+                        <div className="text-sm text-muted-foreground">Email Us</div>
+                        <div className="font-semibold text-foreground">ktmhotelbusinessassociation@gmail.com</div>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-center gap-4">
+                      <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center">
+                        <MapPin className="w-6 h-6 text-primary" />
+                      </div>
+                      <div>
+                        <div className="text-sm text-muted-foreground">Visit Us</div>
+                        <div className="font-semibold text-foreground">Balaju-16, Kathmandu</div>
+                      </div>
+                    </div>
+                  </div>
+                   
+                  <div className="mt-8 p-6 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-xl border border-primary/20">
+                    <div className="flex items-center gap-3 mb-2">
+                      <Star className="w-5 h-5 text-primary" />
+                      <span className="font-semibold text-primary">Excellence Since 2074</span>
+                    </div>
+                    <p className="text-sm text-muted-foreground">
+                      Committed service to Nepal's hospitality industry
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+       
+
+       
+         {/* President's Message */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-primary/5 to-accent/5">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <span className="inline-block px-4 py-2 bg-primary/20 text-primary rounded-full text-sm font-semibold mb-4">
+                Message from The Chairperson
+              </span>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                A Vision of Hospitality Excellence & Collaboration
+              </h2>
+            </div>
+            
+            <div className="grid lg:grid-cols-3 gap-8 items-center">
+              <div className="lg:col-span-2">
+                <div className="bg-white dark:bg-slate-900 rounded-2xl shadow-xl p-8 border border-primary/10 relative overflow-hidden">
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary/10 to-accent/10 rounded-full blur-2xl"></div>
+                   
+                  <div className="relative z-10">
+                    <div className="mb-6">
+                      <p className="text-2xl font-light text-foreground mb-2 italic">
+                        "{organization.presidentMessage?.greeting || "Dear Esteemed Members, Partners, and Valued Stakeholders,"}"
+                      </p>
+                    </div>
+                    
+                    <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
+                      {(organization.presidentMessage?.paragraphs || [
+                        "As President of our association, I am honored to lead an organization committed to the growth and excellence of our hospitality industry.",
+                        "I encourage all hoteliers to actively engage with our initiatives and utilize our resources to strengthen their businesses. Through collaboration, professionalism, and innovation, we can elevate our reputation as a premier hospitality destination."
+                      ]).map((paragraph, index) => (
+                        <p key={index}>{paragraph}</p>
+                      ))}
+                    </div>
+                    
+                    <div className="mt-8 pt-6 border-t border-border">
+                      <div className="flex items-center gap-4">
+                        <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center">
+                          <Star className="w-8 h-8 text-white" />
+                        </div>
+                        <div>
+                          <p className="font-bold text-xl text-foreground">{organization.presidentMessage?.presidentName || "President"}</p>
+                          <p className="text-primary font-semibold">{organization.presidentMessage?.presidentTitle || "President"}</p>
+                          <p className="text-sm text-muted-foreground">{organization.presidentMessage?.organization || organization.name}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="space-y-6">
+                <div className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-xl p-6 border border-primary/20">
+                  <Star className="w-8 h-8 text-primary mb-3" />
+                  <h4 className="font-bold text-primary mb-2">Leadership Commitment</h4>
+                  <p className="text-sm text-muted-foreground">
+                    Dedicated to advancing the interests of our members and uplifting the entire hospitality sector
+                  </p>
+                </div>
+                
+                <div className="bg-gradient-to-br from-secondary/10 to-primary/10 rounded-xl p-6 border border-secondary/20">
+                  <Star className="w-8 h-8 text-secondary mb-3" />
+                  <h4 className="font-bold text-secondary mb-2">Strategic Vision</h4>
+                  <p className="text-sm text-muted-foreground">
+                    Building a collective voice for Kathmandu's hospitality community
+                  </p>
+                </div>
+                
+                <div className="bg-gradient-to-br from-accent/10 to-primary/10 rounded-xl p-6 border border-accent/20">
+                  <Star className="w-8 h-8 text-accent mb-3" />
+                  <h4 className="font-bold text-accent mb-2">Community First</h4>
+                  <p className="text-sm text-muted-foreground">
+                    Fostering collaboration and mutual growth among all members
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* Committee Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background to-secondary/5">
@@ -374,6 +545,81 @@ export default function ClientPage() {
                 </div>
               </>
             )}
+          </div>
+        </section>
+
+        {/* Location Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-background">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <div className="inline-block mb-4">
+                <span className="text-primary font-semibold text-sm tracking-widest uppercase">Location</span>
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Find Our Office</h2>
+              <p className="text-muted-foreground max-w-3xl mx-auto text-lg">
+                Visit our central office in Kathmandu's hospitality district
+              </p>
+            </div>
+            
+            <div className="bg-white dark:bg-slate-900 rounded-2xl shadow-xl overflow-hidden border border-border/50">
+              <div className="p-6 border-b border-border/50 bg-gradient-to-r from-primary/5 to-accent/5">
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center">
+                    <MapPin className="text-white" size={24} />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-foreground mb-1">District Hotel Business Association Kathmandu</h3>
+                    <p className="text-muted-foreground text-sm">Balaju, 16, Kathmandu</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="relative h-80 lg:h-96 bg-muted">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.4567890123456!2d85.3508272!3d27.7058835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1981e4290e07:0xf62e653d652cfb9d!2sPalagya+Hotel!5e0!3m2!1sen!2snp"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="District Hotel Business Association Kathmandu Location Map"
+                  className="rounded-b-2xl"
+                />
+              </div>
+
+              <div className="p-6 bg-gradient-to-r from-primary/5 to-accent/5 border-t border-border/50">
+                <div className="space-y-3">
+                  <div className="flex items-start gap-3">
+                    <div className="w-8 h-8 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <MapPin className="text-primary" size={16} />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-foreground text-sm mb-1">Strategic Location</h4>
+                      <p className="text-xs text-muted-foreground">Centrally located in Kathmandu's hospitality hub</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-8 h-8 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <Phone className="text-primary" size={16} />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-foreground text-sm mb-1">Contact Information</h4>
+                      <p className="text-xs text-muted-foreground">01-4981882 / 9851040296 for appointments</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-8 h-8 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <Phone className="text-primary" size={16} />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-foreground text-sm mb-1">Business Hours</h4>
+                      <p className="text-xs text-muted-foreground">Sunday-Friday: 9AM-5PM, Saturday: Closed</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
