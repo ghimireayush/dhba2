@@ -1,5 +1,15 @@
 export const memberOrganizations = [
   {
+    id: "unity-hotel-guesthouse-professionals",
+    name: "Unity Hotel and Guest House Professionals Association",
+    shortName: "Unity HGPA",
+    committee: [
+      { role: "President", name: "Devaki Bhandari", phone: "9851040296" },
+      { role: "Vice President", name: "Mohan Lama", phone: "9852456789" },
+      { role: "General Secretary", name: "Niraj Tamang", phone: "9852678901" },
+    ],
+  },
+  {
     id: "balaju-hotel-business",
     name: "Balaju Hotel Business Association",
     shortName: "Balaju HBA",

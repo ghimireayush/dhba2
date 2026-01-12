@@ -88,32 +88,46 @@ export function Header() {
               {/* Dropdown Content */}
               <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                 <div className="bg-popover text-popover-foreground min-w-[200px] rounded-md border p-1 shadow-md">
-                  <Link
-                    href="/members/balaju"
-                    className="relative flex cursor-default items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-hidden select-none w-full hover:bg-accent hover:text-accent-foreground"
-                  >
-                    {t("members.balaju")}
-                  </Link>
-                  <Link
-                    href="/members/kalanki"
-                    className="relative flex cursor-default items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-hidden select-none w-full hover:bg-accent hover:text-accent-foreground"
-                  >
-                    {t("members.kalanki")}
-                  </Link>
-                  <Link
-                    href="/members/kathmandu"
-                    className="relative flex cursor-default items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-hidden select-none w-full hover:bg-accent hover:text-accent-foreground"
-                  >
-                    {t("members.kathmandu")}
-                  </Link>
-                  <Link
-                    href="/members/nepalguesthouse"
-                    className="relative flex cursor-default items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-hidden select-none w-full hover:bg-accent hover:text-accent-foreground"
-                  >
-                    {t("members.nepalguesthouse")}
-                  </Link>
-                  <Link
-                    href="/members/sundhara"
+                  <DropdownMenuItem asChild>
+                    <Link href="/members/unity" className="w-full">
+                      {t("members.unity")}
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link href="/members/balaju" className="w-full">
+                      {t("members.balaju")}
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link href="/members/kalanki" className="w-full">
+                      {t("members.kalanki")}
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link href="/members/kathmandu" className="w-full">
+                      {t("members.kathmandu")}
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link href="/members/nepalguesthouse" className="w-full">
+                      {t("members.nepalguesthouse")}
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link href="/members/sundhara" className="w-full">
+                      {t("members.sundhara")}
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link href="/members/united" className="w-full">
+                      {t("members.united")}
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link href="/members/nepalihotel" className="w-full">
+                      {t("members.nepalihotel")}
+                    </Link>
+                  </DropdownMenuItem>
                     className="relative flex cursor-default items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-hidden select-none w-full hover:bg-accent hover:text-accent-foreground"
                   >
                     {t("members.sundhara")}
@@ -284,6 +298,13 @@ export function Header() {
               />
               <div className="absolute left-4 top-full mt-1 z-50 min-w-[200px]">
                 <div className="bg-popover text-popover-foreground rounded-md border p-1 shadow-lg">
+                  <Link
+                    href="/members/unity"
+                    className="relative flex cursor-default items-center gap-2 rounded-sm px-3 py-2 text-sm outline-hidden select-none w-full hover:bg-accent hover:text-accent-foreground"
+                    onClick={() => setMobileDropdownOpen(false)}
+                  >
+                    {t("members.unity")}
+                  </Link>
                   <Link
                     href="/members/balaju"
                     className="relative flex cursor-default items-center gap-2 rounded-sm px-3 py-2 text-sm outline-hidden select-none w-full hover:bg-accent hover:text-accent-foreground"
