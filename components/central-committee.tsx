@@ -54,16 +54,24 @@ export function CentralCommittee() {
                   key={index}
                   className={`group relative rounded-xl overflow-hidden transition-all duration-300 hover:shadow-xl ${
                     isPresident 
-                      ? "bg-white dark:bg-slate-900 border border-amber-300/60 hover:border-amber-400/80" 
+                      ? "bg-white dark:bg-slate-900 border border-primary/60 hover:border-primary/80" 
                       : "bg-white dark:bg-slate-900 border border-border/50 hover:border-primary/50"
                   } transform transition-all duration-700 ${
                     isVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-8 scale-95'
                   }`}
                   style={{ transitionDelay: `${300 + index * 100}ms` }}
                 >
+                  {/* Premium Diagonal Ribbon for President */}
+                  {isPresident && (
+                    <div className="absolute top-0 right-0 w-24 h-24 overflow-hidden z-20">
+                      <div className="absolute top-[12px] right-[-32px] w-[140px] transform rotate-45 bg-gradient-to-r from-secondary via-accent to-secondary text-white text-[10px] font-bold py-1.5 text-center shadow-lg tracking-wider uppercase">
+                        PRESIDENT
+                      </div>
+                    </div>
+                  )}
                   <div className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${
                     isPresident 
-                      ? "bg-gradient-to-br from-amber-400/5 to-yellow-400/5" 
+                      ? "bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10" 
                       : "bg-gradient-to-br from-primary/5 to-transparent"
                   }`}></div>
 
@@ -73,7 +81,7 @@ export function CentralCommittee() {
                       <div className="relative w-24 h-24 mb-4 group-hover:scale-110 transition-transform duration-300">
                         <div className={`absolute inset-0 rounded-full p-1 ${
                           isPresident 
-                            ? "bg-gradient-to-br from-amber-400/80 via-yellow-500/80 to-amber-500/80" 
+                            ? "bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10" 
                             : "bg-gradient-to-br from-primary to-accent"
                         }`}>
                           <div className="w-full h-full rounded-full overflow-hidden bg-white dark:bg-slate-900">
@@ -89,7 +97,7 @@ export function CentralCommittee() {
                       </div>
                       
                       <p className={`text-xs font-semibold uppercase tracking-wider mb-2 ${
-                        isPresident ? "text-amber-600/80 dark:text-amber-400/80" : "text-primary"
+                        isPresident ? "text-primary" : "text-primary"
                       }`}>
                         {member.position}
                       </p>
@@ -99,9 +107,9 @@ export function CentralCommittee() {
                     </div>
 
                     <div className={`flex items-center justify-center gap-2 pt-4 border-t ${
-                      isPresident ? "border-amber-200/50" : "border-border/30"
+                      isPresident ? "border-primary/30" : "border-border/30"
                     }`}>
-                      <Phone className={`w-4 h-4 shrink-0 ${isPresident ? "text-amber-500/70" : "text-primary/70"}`} />
+                      <Phone className={`w-4 h-4 shrink-0 ${isPresident ? "text-primary" : "text-primary/70"}`} />
                       <a
                         href={`tel:+977${member.phone}`}
                         className="text-sm text-muted-foreground hover:text-primary transition-colors duration-300 group-hover:font-medium"

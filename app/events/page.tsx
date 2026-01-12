@@ -94,7 +94,7 @@ export default function EventsPage() {
 
         <section className="py-12 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <div className="mb-12 text-center bg-gradient-to-r from-green-900 via-green-700 to-orange-700 text-white py-12 px-4 rounded-lg">
+            <div className="mb-12 text-center bg-gradient-to-r from-primary via-secondary to-accent text-white py-12 px-4 rounded-lg">
               <h1 className="text-4xl font-bold mb-2">Events & News</h1>
               <p className="text-lg opacity-90">Stay updated with latest news, events, and announcements</p>
             </div>
