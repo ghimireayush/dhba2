@@ -12,10 +12,12 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
+import { useState } from "react"
 
 export function Header() {
   const pathname = usePathname()
   const { t } = useLanguage()
+  const [mobileDropdownOpen, setMobileDropdownOpen] = useState(false)
 
   const isActive = (href: string) =>
     href === "/" ? pathname === "/" : pathname.startsWith(href)
@@ -231,8 +233,9 @@ export function Header() {
             ))}
 
             {/* MOBILE MEMBERS DROPDOWN */}
-            <div className="relative group">
+            <div className="relative">
               <button
+                onClick={() => setMobileDropdownOpen(!mobileDropdownOpen)}
                 className={`flex items-center gap-1 whitespace-nowrap text-sm transition-all duration-200
                   ${
                     pathname.startsWith("/members")
@@ -241,51 +244,60 @@ export function Header() {
                   }`}
               >
                 {t("nav.members")}
-                <ChevronDown className="h-3 w-3 transition-transform duration-200 group-hover:rotate-180" />
+                <ChevronDown className={`h-3 w-3 transition-transform duration-200 ${mobileDropdownOpen ? 'rotate-180' : ''}`} />
               </button>
               
               {/* Mobile Dropdown Content */}
-              <div className="absolute top-full left-0 mt-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 min-w-[180px]">
+              <div className={`absolute top-full left-0 mt-1 transition-all duration-200 z-50 min-w-[180px] ${
+                mobileDropdownOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
+              }`}>
                 <div className="bg-popover text-popover-foreground rounded-md border p-1 shadow-md">
                   <Link
                     href="/members/balaju"
                     className="relative flex cursor-default items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-hidden select-none w-full hover:bg-accent hover:text-accent-foreground"
+                    onClick={() => setMobileDropdownOpen(false)}
                   >
                     {t("members.balaju")}
                   </Link>
                   <Link
                     href="/members/kalanki"
                     className="relative flex cursor-default items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-hidden select-none w-full hover:bg-accent hover:text-accent-foreground"
+                    onClick={() => setMobileDropdownOpen(false)}
                   >
                     {t("members.kalanki")}
                   </Link>
                   <Link
                     href="/members/kathmandu"
                     className="relative flex cursor-default items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-hidden select-none w-full hover:bg-accent hover:text-accent-foreground"
+                    onClick={() => setMobileDropdownOpen(false)}
                   >
                     {t("members.kathmandu")}
                   </Link>
                   <Link
                     href="/members/nepalguesthouse"
                     className="relative flex cursor-default items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-hidden select-none w-full hover:bg-accent hover:text-accent-foreground"
+                    onClick={() => setMobileDropdownOpen(false)}
                   >
                     {t("members.nepalguesthouse")}
                   </Link>
                   <Link
                     href="/members/sundhara"
                     className="relative flex cursor-default items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-hidden select-none w-full hover:bg-accent hover:text-accent-foreground"
+                    onClick={() => setMobileDropdownOpen(false)}
                   >
                     {t("members.sundhara")}
                   </Link>
                   <Link
                     href="/members/united"
                     className="relative flex cursor-default items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-hidden select-none w-full hover:bg-accent hover:text-accent-foreground"
+                    onClick={() => setMobileDropdownOpen(false)}
                   >
                     {t("members.united")}
                   </Link>
                   <Link
                     href="/members/nepalihotel"
                     className="relative flex cursor-default items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-hidden select-none w-full hover:bg-accent hover:text-accent-foreground"
+                    onClick={() => setMobileDropdownOpen(false)}
                   >
                     {t("members.nepalihotel")}
                   </Link>
