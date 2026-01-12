@@ -83,43 +83,43 @@ export function Header() {
               <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                 <div className="bg-popover text-popover-foreground min-w-[200px] rounded-md border p-1 shadow-md">
                   <Link
-                    href="/members/balaju"
+                    href="/members/balaju-hotel-business"
                     className="relative flex cursor-default items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-hidden select-none w-full hover:bg-accent hover:text-accent-foreground"
                   >
                     {t("members.balaju")}
                   </Link>
                   <Link
-                    href="/members/kalanki"
+                    href="/members/kalanki-hotel-guesthouse"
                     className="relative flex cursor-default items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-hidden select-none w-full hover:bg-accent hover:text-accent-foreground"
                   >
                     {t("members.kalanki")}
                   </Link>
                   <Link
-                    href="/members/kathmandu"
+                    href="/members/kathmandu-hotel-business"
                     className="relative flex cursor-default items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-hidden select-none w-full hover:bg-accent hover:text-accent-foreground"
                   >
                     {t("members.kathmandu")}
                   </Link>
                   <Link
-                    href="/members/nepalguesthouse"
+                    href="/members/nepal-guesthouse-business"
                     className="relative flex cursor-default items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-hidden select-none w-full hover:bg-accent hover:text-accent-foreground"
                   >
                     {t("members.nepalguesthouse")}
                   </Link>
                   <Link
-                    href="/members/sundhara"
+                    href="/members/sundhara-hotel-business"
                     className="relative flex cursor-default items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-hidden select-none w-full hover:bg-accent hover:text-accent-foreground"
                   >
                     {t("members.sundhara")}
                   </Link>
                   <Link
-                    href="/members/united"
+                    href="/members/united-hotel-guesthouse"
                     className="relative flex cursor-default items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-hidden select-none w-full hover:bg-accent hover:text-accent-foreground"
                   >
                     {t("members.united")}
                   </Link>
                   <Link
-                    href="/members/nepalihotel"
+                    href="/members/nepali-hotel-business"
                     className="relative flex cursor-default items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-hidden select-none w-full hover:bg-accent hover:text-accent-foreground"
                   >
                     {t("members.nepalihotel")}
@@ -279,49 +279,49 @@ export function Header() {
               <div className="absolute left-4 top-full mt-1 z-50 min-w-[200px]">
                 <div className="bg-popover text-popover-foreground rounded-md border p-1 shadow-lg">
                   <Link
-                    href="/members/balaju"
+                    href="/members/balaju-hotel-business"
                     className="relative flex cursor-default items-center gap-2 rounded-sm px-3 py-2 text-sm outline-hidden select-none w-full hover:bg-accent hover:text-accent-foreground"
                     onClick={() => setMobileDropdownOpen(false)}
                   >
                     {t("members.balaju")}
                   </Link>
                   <Link
-                    href="/members/kalanki"
+                    href="/members/kalanki-hotel-guesthouse"
                     className="relative flex cursor-default items-center gap-2 rounded-sm px-3 py-2 text-sm outline-hidden select-none w-full hover:bg-accent hover:text-accent-foreground"
                     onClick={() => setMobileDropdownOpen(false)}
                   >
                     {t("members.kalanki")}
                   </Link>
                   <Link
-                    href="/members/kathmandu"
+                    href="/members/kathmandu-hotel-business"
                     className="relative flex cursor-default items-center gap-2 rounded-sm px-3 py-2 text-sm outline-hidden select-none w-full hover:bg-accent hover:text-accent-foreground"
                     onClick={() => setMobileDropdownOpen(false)}
                   >
                     {t("members.kathmandu")}
                   </Link>
                   <Link
-                    href="/members/nepalguesthouse"
+                    href="/members/nepal-guesthouse-business"
                     className="relative flex cursor-default items-center gap-2 rounded-sm px-3 py-2 text-sm outline-hidden select-none w-full hover:bg-accent hover:text-accent-foreground"
                     onClick={() => setMobileDropdownOpen(false)}
                   >
                     {t("members.nepalguesthouse")}
                   </Link>
                   <Link
-                    href="/members/sundhara"
+                    href="/members/sundhara-hotel-business"
                     className="relative flex cursor-default items-center gap-2 rounded-sm px-3 py-2 text-sm outline-hidden select-none w-full hover:bg-accent hover:text-accent-foreground"
                     onClick={() => setMobileDropdownOpen(false)}
                   >
                     {t("members.sundhara")}
                   </Link>
                   <Link
-                    href="/members/united"
+                    href="/members/united-hotel-guesthouse"
                     className="relative flex cursor-default items-center gap-2 rounded-sm px-3 py-2 text-sm outline-hidden select-none w-full hover:bg-accent hover:text-accent-foreground"
                     onClick={() => setMobileDropdownOpen(false)}
                   >
                     {t("members.united")}
                   </Link>
                   <Link
-                    href="/members/nepalihotel"
+                    href="/members/nepali-hotel-business"
                     className="relative flex cursor-default items-center gap-2 rounded-sm px-3 py-2 text-sm outline-hidden select-none w-full hover:bg-accent hover:text-accent-foreground"
                     onClick={() => setMobileDropdownOpen(false)}
                   >
