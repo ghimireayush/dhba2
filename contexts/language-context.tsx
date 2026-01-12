@@ -79,13 +79,7 @@ const translations = {
         cta: "Explore Our Members",
         exploreBtn: "Explore Hotels",
         learnMore: "Learn More",
-        badge: "Discover Premium Hospitality",
-        slide2Title: "250+ Active Member Hotels",
-        slide2Subtitle: "Operating in key areas of Kathmandu.",
-        slide2Cta: "View Locations",
-        slide3Title: "Join Our Community",
-        slide3Subtitle: "Be part of Kathmandu's premier hospitality network. Connect with industry leaders and grow your business.",
-        slide3Cta: "Learn More",
+        
       },
       ticker: {
         aboutDhba: "About Us",
@@ -306,18 +300,12 @@ const translations = {
     },
     home: {
       hero: {
-        title: "जिल्ला होटेल व्यवसाय संघ",
-        subtitle: "District Hotel Business Association Kathmandu is a collective organization representing hotels within Kathmandu. It aims to promote sustainable tourism, enhance hospitality standards, and advocate for the interests of its members. DHBA fosters collaboration among hotels, ensuring quality service and contributing to the growth of Kathmandu's vibrant tourism industry.",
+        title: "जिल्ला होटेल व्यवसायी  संघ",
+        subtitle: "जिल्ला होटेल व्यवसायी  संघ काठमाडौं काठमाडौंका होटलहरूको प्रतिनिधित्व गर्ने एक सामूहिक संस्था हो। यसले दिगो पर्यटनलाई प्रोत्साहन दिन्छ, आतिथ्य मानकहरूलाई सुधार गर्छ, र आफ्ना सदस्यहरूको हितको वकालत गर्छ। DHBAले होटलहरूबीच सहयोगलाई प्रोत्साहन दिन्छ, गुणस्तरीय सेवा सुनिश्चित गर्छ, र काठमाडौंको जीवन्त पर्यटन उद्योगको वृद्धिमा योगदान पुर्याउँछ।",
         cta: "हाम्रा सदस्यहरू अन्वेषण गर्नुहोस्",
         exploreBtn: "होटलहरु खोज्नुहोस्",
         learnMore: "अझ जान्नुहोस्",
-        badge: "प्रीमियम आतिथ्य खोज्नुहोस्",
-        slide2Title: "२५०+ सक्रिय सदस्य होटलहरू",
-        slide2Subtitle: "काठमाडौंका मुख्य क्षेत्रहरूमा सञ्चालन।",
-        slide2Cta: "स्थानहरू हेर्नुहोस्",
-        slide3Title: "हाम्रो समुदायमा सामेल हुनुहोस्",
-        slide3Subtitle: "काठमाडौंको प्रमुख आतिथ्य नेटवर्कको हिस्सा बन्नुहोस्। उद्योग नेताहरूसँग जडान गर्नुहोस् र आफ्नो व्यवसाय बढाउनुहोस्।",
-        slide3Cta: "अझ जान्नुहोस्",
+        
       },
       ticker: {
         aboutDhba: "हाम्रो बारेमा",
@@ -373,20 +361,20 @@ const translations = {
     },
     about: {
       title: "हाम्रो बारेमा",
-      subtitle: "जिल्ला होटेल व्यवसाय संघ काठमाडौं",
+      subtitle: "जिल्ला होटेल व्यवसायी  संघ काठमाडौं",
       mission: "हाम्रो मिशन",
       vision: "हाम्रो दृष्टिकोण",
       history: "हाम्रो इतिहास",
       established: "२०६९  बि.स. मा स्थापित",
-      description: "District Hotel Business Association Kathmandu is a collective organization representing hotels within Kathmandu. It aims to promote sustainable tourism, enhance hospitality standards, and advocate for the interests of its members.",
-      fullDescription: "DHBA fosters collaboration among hotels, ensuring quality service and contributing to the growth of Kathmandu's vibrant tourism industry.",
+      description: "जिल्ला होटेल व्यवसायी  संघ काठमाडौं काठमाडौंका होटलहरूको प्रतिनिधित्व गर्ने एक सामूहिक संस्था हो। यसले दिगो पर्यटनलाई प्रोत्साहन दिन्छ, आतिथ्य मानकहरूलाई सुधार गर्छ, र आफ्ना सदस्यहरूको हितको वकालत गर्छ।",
+      fullDescription: "DHBAले होटलहरूबीच सहयोगलाई प्रोत्साहन दिन्छ, गुणस्तरीय सेवा सुनिश्चित गर्छ, र काठमाडौंको जीवन्त पर्यटन उद्योगको वृद्धिमा योगदान पुर्याउँछ।",
        
       previewTitle: "DHBA को बारेमा",
-      previewDescription: "District Hotel Business Association Kathmandu is a collective organization representing hotels within Kathmandu. It aims to promote sustainable tourism, enhance hospitality standards, and advocate for the interests of its members.",
-      serviceAreas: "DHBA fosters collaboration among hotels, ensuring quality service and contributing to the growth of Kathmandu's vibrant tourism industry.",
+      previewDescription: "जिल्ला होटेल व्यवसायी  संघ काठमाडौं काठमाडौंका होटलहरूको प्रतिनिधित्व गर्ने एक सामूहिक संस्था हो। यसले दिगो पर्यटनलाई प्रोत्साहन दिन्छ, आतिथ्य मानकहरूलाई सुधार गर्छ, र आफ्ना सदस्यहरूको हितको वकालत गर्छ।",
+      serviceAreas: "DHBAले होटलहरूबीच सहयोगलाई प्रोत्साहन दिन्छ, गुणस्तरीय सेवा सुनिश्चित गर्छ, र काठमाडौंको जीवन्त पर्यटन उद्योगको वृद्धिमा योगदान पुर्याउँछ।",
       readFullStory: "पूरा कथा पढ्नुहोस्",
       leadershipTitle: "हाम्रो नेतृत्व",
-      presidentTitle: "अध्यक्ष, एकता काठमाडौं",
+      presidentTitle: "अध्यक्ष, DHBA काठमाडौं",
     },
     hotels: {
       title: "होटेल निर्देशिका",
