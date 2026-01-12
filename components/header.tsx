@@ -69,8 +69,8 @@ export function Header() {
             ))}
 
             {/* MEMBERS DROPDOWN */}
-            <DropdownMenu>
-              <DropdownMenuTrigger
+            <div className="relative group">
+              <button
                 className={`group flex items-center gap-1 px-1 py-2 whitespace-nowrap text-sm transition-all duration-200
                   ${
                     pathname.startsWith("/members")
@@ -79,47 +79,58 @@ export function Header() {
                   }`}
               >
                 {t("nav.members")}
-                <ChevronDown className="h-4 w-4" />
+                <ChevronDown className="h-4 w-4 transition-transform duration-200 group-hover:rotate-180" />
                 <span className={underlineClass("/members")} />
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="center" className="min-w-[200px]">
-                <DropdownMenuItem asChild>
-                  <Link href="/members/balaju" className="w-full">
+              </button>
+              
+              {/* Dropdown Content */}
+              <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <div className="bg-popover text-popover-foreground min-w-[200px] rounded-md border p-1 shadow-md">
+                  <Link
+                    href="/members/balaju"
+                    className="relative flex cursor-default items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-hidden select-none w-full hover:bg-accent hover:text-accent-foreground"
+                  >
                     {t("members.balaju")}
                   </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link href="/members/kalanki" className="w-full">
+                  <Link
+                    href="/members/kalanki"
+                    className="relative flex cursor-default items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-hidden select-none w-full hover:bg-accent hover:text-accent-foreground"
+                  >
                     {t("members.kalanki")}
                   </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link href="/members/kathmandu" className="w-full">
+                  <Link
+                    href="/members/kathmandu"
+                    className="relative flex cursor-default items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-hidden select-none w-full hover:bg-accent hover:text-accent-foreground"
+                  >
                     {t("members.kathmandu")}
                   </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link href="/members/nepalguesthouse" className="w-full">
+                  <Link
+                    href="/members/nepalguesthouse"
+                    className="relative flex cursor-default items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-hidden select-none w-full hover:bg-accent hover:text-accent-foreground"
+                  >
                     {t("members.nepalguesthouse")}
                   </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link href="/members/sundhara" className="w-full">
+                  <Link
+                    href="/members/sundhara"
+                    className="relative flex cursor-default items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-hidden select-none w-full hover:bg-accent hover:text-accent-foreground"
+                  >
                     {t("members.sundhara")}
                   </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link href="/members/united" className="w-full">
+                  <Link
+                    href="/members/united"
+                    className="relative flex cursor-default items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-hidden select-none w-full hover:bg-accent hover:text-accent-foreground"
+                  >
                     {t("members.united")}
                   </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link href="/members/nepalihotel" className="w-full">
+                  <Link
+                    href="/members/nepalihotel"
+                    className="relative flex cursor-default items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-hidden select-none w-full hover:bg-accent hover:text-accent-foreground"
+                  >
                     {t("members.nepalihotel")}
                   </Link>
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
+                </div>
+              </div>
+            </div>
 
             {[
               { href: "/hotels", label: t("nav.memberHotels") },
