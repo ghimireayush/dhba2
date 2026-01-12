@@ -4,97 +4,287 @@ import { getMemberOrganization, memberOrganizations } from "@/lib/member-organiz
 import { Breadcrumb } from "@/components/breadcrumb"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import { Phone } from "lucide-react"
+import { Phone, Users, MapPin, Calendar, Globe, Star } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 import { notFound, useParams } from "next/navigation"
+import { useLanguage } from "@/contexts/language-context"
 
 export default function ClientPage() {
   const { id } = useParams<{ id: string }>()
   const organization = getMemberOrganization(id)
+  const { t } = useLanguage()
 
   if (!organization) {
     notFound()
   }
 
+  // Separate president/leadership from regular members
+  const leadership = organization.committee.filter(m => 
+    m.role.toLowerCase().includes('president') || 
+    m.role.toLowerCase().includes('secretary') || 
+    m.role.toLowerCase().includes('treasurer')
+  )
+  const regularMembers = organization.committee.filter(m => 
+    m.role.toLowerCase() === 'member'
+  )
+
   return (
     <>
       <Header />
-      <main className="min-h-screen bg-gradient-to-b from-background to-muted">
+      <main className="min-h-screen">
         <Breadcrumb
-          items={[{ label: "Home", href: "/" }, { label: "Members", href: "/members" }, { label: organization.name }]}
+          items={[{ label: "Home", href: "/" }, { label: "Members", href: "/members" }, { label: organization.shortName }]}
         />
 
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          {/* Organization Header */}
-          <div className="mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">{organization.name}</h1>
-            <p className="text-lg text-muted-foreground">
-              Total Members: <span className="text-primary font-semibold">{organization.committee.length}</span>
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary via-primary/90 to-accent/90 overflow-hidden">
+          <div className="absolute inset-0 bg-black/20"></div>
+          <div className="absolute inset-0">
+            <div className="absolute top-10 left-10 w-32 h-32 bg-white/10 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-10 right-10 w-48 h-48 bg-white/5 rounded-full blur-3xl"></div>
+            <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-accent/10 rounded-full blur-3xl"></div>
+          </div>
+          
+          <div className="relative max-w-6xl mx-auto text-center">
+            <div className="mb-6">
+              <span className="inline-block px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-semibold mb-4">
+                Member Organization
+              </span>
+            </div>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+              {organization.name}
+            </h1>
+            <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-4xl mx-auto leading-relaxed">
+              Part of District Hotel Business Association Kathmandu
             </p>
-          </div>
-
-          {/* Committee Members Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {organization.committee.map((member, index) => (
-              <div
-                key={index}
-                className="bg-card border border-border rounded-lg p-6 hover:shadow-lg transition-smooth hover:border-primary/50 group"
-              >
-                {/* Role Badge */}
-                <div className="inline-block bg-gradient-to-r from-primary/10 to-accent/10 text-primary text-xs font-semibold px-3 py-1 rounded-full mb-4 group-hover:from-primary/20 group-hover:to-accent/20 transition-smooth">
-                  {member.role}
-                </div>
-
-                {/* Name */}
-                <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-smooth">
-                  {member.name}
-                </h3>
-
-                {/* Contact */}
-                <div className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-smooth">
-                  <Phone size={18} className="text-primary" />
-                  <a href={`tel:${member.phone}`} className="font-medium hover:underline">
-                    {member.phone}
-                  </a>
-                </div>
-
-                {/* WhatsApp Link */}
-                <a
-                  href={`https://wa.me/${member.phone.replace(/[^\d+]/g, "")}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-4 inline-flex items-center gap-2 text-sm bg-green-50 text-green-700 px-3 py-2 rounded-lg hover:bg-green-100 transition-smooth"
-                >
-                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.272-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-5.031 1.378c-1.536.925-2.777 2.25-3.514 3.807-.779 1.869-1.024 3.945-.703 5.959.385 2.501 1.581 4.759 3.452 6.38 1.871 1.62 4.638 2.571 7.439 2.571h.006c5.455 0 9.9-4.445 9.9-9.9 0-1.326-.286-2.614-.831-3.856-.528-1.179-1.437-2.24-2.561-3.036-1.124-.797-2.505-1.235-3.937-1.235z" />
-                  </svg>
-                  WhatsApp
-                </a>
+            
+            {/* Stats */}
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                <Users className="w-8 h-8 text-white mb-3 mx-auto" />
+                <div className="text-3xl font-bold text-white mb-1">{organization.committee.length}</div>
+                <div className="text-white/80 text-sm">Committee Members</div>
               </div>
-            ))}
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                <MapPin className="w-8 h-8 text-white mb-3 mx-auto" />
+                <div className="text-3xl font-bold text-white mb-1">Kathmandu</div>
+                <div className="text-white/80 text-sm">Location</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 col-span-2 md:col-span-1">
+                <Globe className="w-8 h-8 text-white mb-3 mx-auto" />
+                <div className="text-3xl font-bold text-white mb-1">DHBA</div>
+                <div className="text-white/80 text-sm">Parent Organization</div>
+              </div>
+            </div>
           </div>
+        </section>
 
-          {/* Related Organizations */}
-          <div className="mt-16 pt-12 border-t border-border">
-            <h2 className="text-2xl font-bold text-foreground mb-6">Other Member Organizations</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {/* Committee Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background to-secondary/5">
+          <div className="max-w-7xl mx-auto">
+            {/* Leadership Section */}
+            <div className="text-center mb-16">
+              <div className="inline-block mb-4">
+                <span className="text-primary font-semibold text-sm tracking-widest uppercase">Leadership</span>
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Executive Committee</h2>
+              <p className="text-muted-foreground max-w-3xl mx-auto text-lg">
+                Meet the dedicated leaders driving {organization.shortName}'s vision forward
+              </p>
+            </div>
+
+            <div className="flex flex-wrap justify-center gap-8 mb-20">
+              {leadership.map((member, index) => {
+                const isPresident = member.role.toLowerCase() === "president"
+                return (
+                  <div
+                    key={index}
+                    className={`group relative rounded-2xl overflow-hidden transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 w-full sm:w-[calc(50%-1rem)] md:w-[calc(33.333%-1.5rem)] lg:w-[calc(25%-1.5rem)] max-w-[280px] ${
+                      isPresident 
+                        ? "bg-gradient-to-br from-amber-50 via-white to-yellow-50 dark:from-amber-900/30 dark:via-slate-900 dark:to-yellow-900/30 border-2 border-amber-300/60 hover:border-amber-400/80 shadow-lg" 
+                        : "bg-white dark:bg-slate-900 border border-border/50 hover:border-primary/50 shadow-lg"
+                    }`}
+                  >
+                    <div className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ${
+                      isPresident 
+                        ? "bg-gradient-to-br from-amber-400/10 to-yellow-400/10" 
+                        : "bg-gradient-to-br from-primary/10 to-accent/10"
+                    }`}></div>
+                    
+                    <div className="p-8 relative z-10">
+                      <div className="flex flex-col items-center text-center mb-6">
+                        {/* Member Photo */}
+                        <div className="relative w-36 h-36 mb-6 group-hover:scale-110 transition-transform duration-500">
+                          <div className={`absolute inset-0 rounded-full p-1 ${
+                            isPresident 
+                              ? "bg-gradient-to-br from-amber-400 via-yellow-500 to-amber-500 shadow-lg" 
+                              : "bg-gradient-to-br from-primary to-accent shadow-lg"
+                          }`}>
+                            <div className="w-full h-full rounded-full overflow-hidden bg-white dark:bg-slate-900 flex items-center justify-center">
+                              <Image
+                                src="/dbha.png"
+                                alt={member.name}
+                                width={144}
+                                height={144}
+                                className="w-3/4 h-3/4 object-contain"
+                              />
+                            </div>
+                          </div>
+                          {isPresident && (
+                            <div className="absolute -top-2 -right-2 w-8 h-8 bg-gradient-to-br from-amber-400 to-yellow-500 rounded-full flex items-center justify-center shadow-lg">
+                              <Star className="w-4 h-4 text-white" />
+                            </div>
+                          )}
+                        </div>
+                        
+                        <p className={`text-sm font-bold uppercase tracking-wider mb-3 ${
+                          isPresident ? "text-amber-600 dark:text-amber-400" : "text-primary"
+                        }`}>
+                          {member.role}
+                        </p>
+                        <h4 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors duration-500 mb-2">
+                          {member.name}
+                        </h4>
+                        {isPresident && (
+                          <div className="inline-flex items-center gap-1 px-3 py-1 bg-amber-100 dark:bg-amber-900/30 rounded-full">
+                            <Star className="w-3 h-3 text-amber-600 dark:text-amber-400" />
+                            <span className="text-xs font-semibold text-amber-700 dark:text-amber-300">President</span>
+                          </div>
+                        )}
+                      </div>
+
+                      {member.phone && (
+                        <div className={`flex items-center justify-center gap-3 pt-6 border-t ${
+                          isPresident ? "border-amber-200/50" : "border-border/30"
+                        }`}>
+                          <div className={`w-10 h-10 rounded-full flex items-center justify-center ${
+                            isPresident ? "bg-amber-100 dark:bg-amber-900/30" : "bg-primary/10"
+                          }`}>
+                            <Phone className={`w-4 h-4 ${isPresident ? "text-amber-600 dark:text-amber-400" : "text-primary"}`} />
+                          </div>
+                          <a
+                            href={`tel:+977${member.phone}`}
+                            className="text-sm text-muted-foreground hover:text-primary transition-colors duration-300 group-hover:font-medium"
+                          >
+                            +977 {member.phone}
+                          </a>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                )
+              })}
+            </div>
+
+            {/* Regular Members Section */}
+            {regularMembers.length > 0 && (
+              <>
+                <div className="text-center mb-16">
+                  <div className="inline-block mb-4">
+                    <span className="text-primary font-semibold text-sm tracking-widest uppercase">Team</span>
+                  </div>
+                  <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Committee Members</h2>
+                  <p className="text-muted-foreground max-w-3xl mx-auto text-lg">
+                    Dedicated members contributing to the growth and success of our association
+                  </p>
+                </div>
+
+                <div className="flex flex-wrap justify-center gap-8">
+                  {regularMembers.map((member, index) => (
+                    <div
+                      key={index}
+                      className="group relative bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-border/50 hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 w-full sm:w-[calc(50%-1rem)] md:w-[calc(33.333%-1.5rem)] lg:w-[calc(25%-1.5rem)] max-w-[280px]"
+                    >
+                      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                      
+                      <div className="p-8 relative z-10">
+                        <div className="flex flex-col items-center text-center mb-6">
+                          {/* Member Photo */}
+                          <div className="relative w-32 h-32 mb-6 group-hover:scale-110 transition-transform duration-500">
+                            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary to-accent p-1 shadow-lg">
+                              <div className="w-full h-full rounded-full overflow-hidden bg-white dark:bg-slate-900 flex items-center justify-center">
+                                <Image
+                                  src="/dbha.png"
+                                  alt={member.name}
+                                  width={128}
+                                  height={128}
+                                  className="w-3/4 h-3/4 object-contain"
+                                />
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <p className="text-xs font-bold text-primary uppercase tracking-wider mb-3">
+                            {member.role}
+                          </p>
+                          <h4 className="text-base font-bold text-foreground group-hover:text-primary transition-colors duration-500">
+                            {member.name}
+                          </h4>
+                        </div>
+
+                        {member.phone && (
+                          <div className="flex items-center justify-center gap-3 pt-6 border-t border-border/30">
+                            <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                              <Phone className="w-4 h-4 text-primary" />
+                            </div>
+                            <a
+                              href={`tel:+977${member.phone}`}
+                              className="text-sm text-muted-foreground hover:text-primary transition-colors duration-300 group-hover:font-medium"
+                            >
+                              +977 {member.phone}
+                            </a>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </>
+            )}
+          </div>
+        </section>
+
+        {/* Related Organizations */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-background">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-12">
+              <div className="inline-block mb-4">
+                <span className="text-primary font-semibold text-sm tracking-widest uppercase">Network</span>
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">{t("members.relatedOrgs")}</h2>
+              <p className="text-muted-foreground max-w-3xl mx-auto text-lg">
+                Explore other member organizations under DHBA
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {memberOrganizations
                 .filter((org) => org.id !== organization.id)
                 .map((org) => (
                   <Link
                     key={org.id}
                     href={`/members/${org.id}`}
-                    className="p-4 bg-card border border-border rounded-lg hover:border-primary hover:shadow-lg transition-smooth group"
+                    className="group p-6 bg-white dark:bg-slate-900 border border-border/50 rounded-2xl hover:border-primary/50 hover:shadow-xl transition-all duration-300"
                   >
-                    <h3 className="font-semibold text-foreground group-hover:text-primary transition-smooth mb-2">
-                      {org.name}
-                    </h3>
-                    <p className="text-sm text-muted-foreground">{org.committee.length} members</p>
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center flex-shrink-0">
+                        <Users className="w-6 h-6 text-white" />
+                      </div>
+                      <div>
+                        <h3 className="font-bold text-foreground group-hover:text-primary transition-colors duration-300 mb-2">
+                          {org.name}
+                        </h3>
+                        <p className="text-sm text-muted-foreground">
+                          {org.committee.length} {t("members.membersCount")}
+                        </p>
+                      </div>
+                    </div>
                   </Link>
                 ))}
             </div>
           </div>
-        </div>
+        </section>
       </main>
       <Footer />
     </>
