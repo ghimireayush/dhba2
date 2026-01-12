@@ -372,13 +372,13 @@ export default function AboutPage() {
                               ? "bg-gradient-to-br from-amber-400 via-yellow-500 to-amber-500 shadow-lg" 
                               : "bg-gradient-to-br from-primary to-accent shadow-lg"
                           }`}>
-                            <div className="w-full h-full rounded-full overflow-hidden bg-white dark:bg-slate-900">
+                            <div className="w-full h-full rounded-full overflow-hidden bg-white dark:bg-slate-900 flex items-center justify-center">
                               <Image
-                                src={member.photo || "/placeholder-user.jpg"}
+                                src={member.photo || "/dbha.png"}
                                 alt={member.name}
                                 width={144}
                                 height={144}
-                                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                className={member.photo ? "w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" : "w-3/4 h-3/4 object-contain"}
                               />
                             </div>
                           </div>
@@ -450,13 +450,13 @@ export default function AboutPage() {
                       {/* Member Photo */}
                       <div className="relative w-32 h-32 mb-6 group-hover:scale-110 transition-transform duration-500">
                         <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary to-accent p-1 shadow-lg">
-                          <div className="w-full h-full rounded-full overflow-hidden bg-white dark:bg-slate-900">
+                          <div className="w-full h-full rounded-full overflow-hidden bg-white dark:bg-slate-900 flex items-center justify-center">
                             <Image
-                              src={member.photo || "/placeholder-user.jpg"}
+                              src={member.photo || "/dbha.png"}
                               alt={member.name}
                               width={128}
                               height={128}
-                              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                              className={member.photo ? "w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" : "w-3/4 h-3/4 object-contain"}
                             />
                           </div>
                         </div>
