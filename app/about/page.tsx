@@ -25,7 +25,7 @@ export default function AboutPage() {
         <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "About" }]} />
 
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary via-primary/90 to-accent/90 overflow-hidden">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-primary via-secondary to-accent text-white overflow-hidden">
           <div className="absolute inset-0 bg-black/20"></div>
           <div className="absolute inset-0">
             <div className="absolute top-10 left-10 w-32 h-32 bg-white/10 rounded-full blur-3xl"></div>
@@ -138,12 +138,12 @@ export default function AboutPage() {
                     </div>
                   </div>
                   
-                  <div className="mt-8 p-6 bg-gradient-to-r from-amber-50 to-yellow-50 dark:from-amber-900/20 dark:to-yellow-900/20 rounded-xl border border-amber-200/50">
+                  <div className="mt-8 p-6 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-xl border border-primary/20">
                     <div className="flex items-center gap-3 mb-2">
-                      <Star className="w-5 h-5 text-amber-600" />
-                      <span className="font-semibold text-amber-800 dark:text-amber-200">Excellence Since 2074</span>
+                      <Star className="w-5 h-5 text-primary" />
+                      <span className="font-semibold text-primary">Excellence Since 2074</span>
                     </div>
-                    <p className="text-sm text-amber-700 dark:text-amber-300">
+                    <p className="text-sm text-muted-foreground">
                       Committed service to Nepal's hospitality industry
                     </p>
                   </div>
@@ -203,26 +203,26 @@ export default function AboutPage() {
               </div>
               
               <div className="space-y-6">
-                <div className="bg-gradient-to-br from-amber-50 to-yellow-50 dark:from-amber-900/20 dark:to-yellow-900/20 rounded-xl p-6 border border-amber-200/50">
-                  <Star className="w-8 h-8 text-amber-600 mb-3" />
-                  <h4 className="font-bold text-amber-800 dark:text-amber-200 mb-2">Leadership Commitment</h4>
-                  <p className="text-sm text-amber-700 dark:text-amber-300">
+                <div className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-xl p-6 border border-primary/20">
+                  <Star className="w-8 h-8 text-primary mb-3" />
+                  <h4 className="font-bold text-primary mb-2">Leadership Commitment</h4>
+                  <p className="text-sm text-muted-foreground">
                     Dedicated to advancing the interests of our members and uplifting the entire hospitality sector
                   </p>
                 </div>
                 
-                <div className="bg-gradient-to-br from-blue-50 to-primary/10 dark:from-blue-900/20 dark:to-primary/20 rounded-xl p-6 border border-blue-200/50">
-                  <Target className="w-8 h-8 text-blue-600 mb-3" />
-                  <h4 className="font-bold text-blue-800 dark:text-blue-200 mb-2">Strategic Vision</h4>
-                  <p className="text-sm text-blue-700 dark:text-blue-300">
+                <div className="bg-gradient-to-br from-secondary/10 to-primary/10 rounded-xl p-6 border border-secondary/20">
+                  <Target className="w-8 h-8 text-secondary mb-3" />
+                  <h4 className="font-bold text-secondary mb-2">Strategic Vision</h4>
+                  <p className="text-sm text-muted-foreground">
                     Building a collective voice for Kathmandu's hospitality community
                   </p>
                 </div>
                 
-                <div className="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 rounded-xl p-6 border border-green-200/50">
-                  <Heart className="w-8 h-8 text-green-600 mb-3" />
-                  <h4 className="font-bold text-green-800 dark:text-green-200 mb-2">Community First</h4>
-                  <p className="text-sm text-green-700 dark:text-green-300">
+                <div className="bg-gradient-to-br from-accent/10 to-primary/10 rounded-xl p-6 border border-accent/20">
+                  <Heart className="w-8 h-8 text-accent mb-3" />
+                  <h4 className="font-bold text-accent mb-2">Community First</h4>
+                  <p className="text-sm text-muted-foreground">
                     Fostering collaboration and mutual growth among all members
                   </p>
                 </div>
@@ -353,13 +353,22 @@ export default function AboutPage() {
                     key={index}
                     className={`group relative rounded-2xl overflow-hidden transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 w-full sm:w-[calc(50%-1rem)] md:w-[calc(33.333%-1.5rem)] lg:w-[calc(25%-1.5rem)] max-w-[280px] ${
                       isPresident 
-                        ? "bg-gradient-to-br from-amber-50 via-white to-yellow-50 dark:from-amber-900/30 dark:via-slate-900 dark:to-yellow-900/30 border-2 border-amber-300/60 hover:border-amber-400/80 shadow-lg" 
+                        ? "bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10 border-2 border-primary/60 hover:border-primary/80 shadow-lg" 
                         : "bg-white dark:bg-slate-900 border border-border/50 hover:border-primary/50 shadow-lg"
                     }`}
                   >
+                    {/* Premium Diagonal Ribbon for President */}
+                    {isPresident && (
+                      <div className="absolute top-0 right-0 w-24 h-24 overflow-hidden z-20">
+                        <div className="absolute top-[12px] right-[-32px] w-[140px] transform rotate-45 bg-gradient-to-r from-primary via-secondary to-accent text-white text-[10px] font-bold py-1.5 text-center shadow-lg tracking-wider uppercase">
+                          PRESIDENT
+                        </div>
+                      </div>
+                    )}
+                    
                     <div className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ${
                       isPresident 
-                        ? "bg-gradient-to-br from-amber-400/10 to-yellow-400/10" 
+                        ? "bg-gradient-to-br from-primary/10 to-accent/10" 
                         : "bg-gradient-to-br from-primary/10 to-accent/10"
                     }`}></div>
                     
@@ -369,7 +378,7 @@ export default function AboutPage() {
                         <div className="relative w-36 h-36 mb-6 group-hover:scale-110 transition-transform duration-500">
                           <div className={`absolute inset-0 rounded-full p-1 ${
                             isPresident 
-                              ? "bg-gradient-to-br from-amber-400 via-yellow-500 to-amber-500 shadow-lg" 
+                              ? "bg-gradient-to-br from-primary via-secondary to-accent shadow-lg" 
                               : "bg-gradient-to-br from-primary to-accent shadow-lg"
                           }`}>
                             <div className="w-full h-full rounded-full overflow-hidden bg-white dark:bg-slate-900 flex items-center justify-center">
@@ -382,35 +391,30 @@ export default function AboutPage() {
                               />
                             </div>
                           </div>
+                          {/* Star Badge for President */}
                           {isPresident && (
-                            <div className="absolute -top-2 -right-2 w-8 h-8 bg-gradient-to-br from-amber-400 to-yellow-500 rounded-full flex items-center justify-center shadow-lg">
+                            <div className="absolute -top-2 -right-2 w-8 h-8 bg-gradient-to-br from-secondary to-accent rounded-full flex items-center justify-center shadow-lg z-10">
                               <Star className="w-4 h-4 text-white" />
                             </div>
                           )}
                         </div>
                         
                         <p className={`text-sm font-bold uppercase tracking-wider mb-3 ${
-                          isPresident ? "text-amber-600 dark:text-amber-400" : "text-primary"
+                          isPresident ? "text-primary" : "text-primary"
                         }`} dangerouslySetInnerHTML={{ __html: member.position }}></p>
-                        <h4 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors duration-500 mb-2">
+                        <h4 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors duration-500">
                           {member.name}
                         </h4>
-                        {isPresident && (
-                          <div className="inline-flex items-center gap-1 px-3 py-1 bg-amber-100 dark:bg-amber-900/30 rounded-full">
-                            <Star className="w-3 h-3 text-amber-600 dark:text-amber-400" />
-                            <span className="text-xs font-semibold text-amber-700 dark:text-amber-300">President</span>
-                          </div>
-                        )}
                       </div>
 
                       {member.phone && (
                         <div className={`flex items-center justify-center gap-3 pt-6 border-t ${
-                          isPresident ? "border-amber-200/50" : "border-border/30"
+                          isPresident ? "border-primary/30" : "border-border/30"
                         }`}>
                           <div className={`w-10 h-10 rounded-full flex items-center justify-center ${
-                            isPresident ? "bg-amber-100 dark:bg-amber-900/30" : "bg-primary/10"
+                            isPresident ? "bg-primary/20" : "bg-primary/10"
                           }`}>
-                            <Phone className={`w-4 h-4 ${isPresident ? "text-amber-600 dark:text-amber-400" : "text-primary"}`} />
+                            <Phone className={`w-4 h-4 ${isPresident ? "text-primary" : "text-primary"}`} />
                           </div>
                           <a
                             href={`tel:+977${member.phone}`}
