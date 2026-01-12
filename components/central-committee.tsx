@@ -64,7 +64,7 @@ export function CentralCommittee() {
                   {/* Premium Diagonal Ribbon for President */}
                   {isPresident && (
                     <div className="absolute top-0 right-0 w-24 h-24 overflow-hidden z-20">
-                      <div className="absolute top-[12px] right-[-32px] w-[140px] transform rotate-45 bg-gradient-to-r from-secondary via-accent to-secondary text-white text-[10px] font-bold py-1.5 text-center shadow-lg tracking-wider uppercase">
+                      <div className="absolute top-[12px] right-[-32px] w-[140px] transform rotate-45 bg-gradient-to-r from-primary via-secondary to-accent text-white text-[10px] font-bold py-1.5 text-center shadow-lg tracking-wider uppercase">
                         PRESIDENT
                       </div>
                     </div>
