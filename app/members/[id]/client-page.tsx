@@ -242,6 +242,136 @@ export default function ClientPage() {
                 </div>
               </>
             )}
+
+            {/* Advisors Section */}
+            {organization.advisors && organization.advisors.length > 0 && (
+              <>
+                <div className="text-center mb-16 mt-20">
+                  <div className="inline-block mb-4">
+                    <span className="text-primary font-semibold text-sm tracking-widest uppercase">Guidance</span>
+                  </div>
+                  <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Honorary Advisors</h2>
+                  <p className="text-muted-foreground max-w-3xl mx-auto text-lg">
+                    Esteemed experts providing strategic guidance and wisdom
+                  </p>
+                </div>
+
+                <div className="flex flex-wrap justify-center gap-8 mb-20">
+                  {organization.advisors.map((member, index) => (
+                    <div
+                      key={index}
+                      className="group relative bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-border/50 hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 w-full sm:w-[calc(50%-1rem)] md:w-[calc(33.333%-1.5rem)] lg:w-[calc(25%-1.5rem)] max-w-[280px]"
+                    >
+                      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                      
+                      <div className="p-8 relative z-10">
+                        <div className="flex flex-col items-center text-center mb-6">
+                          <div className="relative w-32 h-32 mb-6 group-hover:scale-110 transition-transform duration-500">
+                            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary to-accent p-1 shadow-lg">
+                              <div className="w-full h-full rounded-full overflow-hidden bg-white dark:bg-slate-900 flex items-center justify-center">
+                                <Image
+                                  src={member.photo || "/dbha.png"}
+                                  alt={member.name}
+                                  width={128}
+                                  height={128}
+                                  className={member.photo ? "w-full h-full object-cover" : "w-3/4 h-3/4 object-contain"}
+                                />
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <p className="text-xs font-bold text-primary uppercase tracking-wider mb-3">
+                            {member.role}
+                          </p>
+                          <h4 className="text-base font-bold text-foreground group-hover:text-primary transition-colors duration-500">
+                            {member.name}
+                          </h4>
+                        </div>
+
+                        {member.phone && (
+                          <div className="flex items-center justify-center gap-3 pt-6 border-t border-border/30">
+                            <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                              <Phone className="w-4 h-4 text-primary" />
+                            </div>
+                            <a
+                              href={`tel:+977${member.phone}`}
+                              className="text-sm text-muted-foreground hover:text-primary transition-colors duration-300 group-hover:font-medium"
+                            >
+                              +977 {member.phone}
+                            </a>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </>
+            )}
+
+            {/* Staff Section */}
+            {organization.staff && organization.staff.length > 0 && (
+              <>
+                <div className="text-center mb-16 mt-20">
+                  <div className="inline-block mb-4">
+                    <span className="text-primary font-semibold text-sm tracking-widest uppercase">Support</span>
+                  </div>
+                  <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Dedicated Staff</h2>
+                  <p className="text-muted-foreground max-w-3xl mx-auto text-lg">
+                    The backbone of our association, ensuring smooth operations
+                  </p>
+                </div>
+
+                <div className="flex flex-wrap justify-center gap-8">
+                  {organization.staff.map((member, index) => (
+                    <div
+                      key={index}
+                      className="group relative bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-border/50 hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 w-full sm:w-[calc(50%-1rem)] md:w-[calc(33.333%-1.5rem)] lg:w-[calc(25%-1.5rem)] max-w-[280px]"
+                    >
+                      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                      
+                      <div className="p-8 relative z-10">
+                        <div className="flex flex-col items-center text-center mb-6">
+                          <div className="relative w-32 h-32 mb-6 group-hover:scale-110 transition-transform duration-500">
+                            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary to-accent p-1 shadow-lg">
+                              <div className="w-full h-full rounded-full overflow-hidden bg-white dark:bg-slate-900 flex items-center justify-center">
+                                <Image
+                                  src={member.photo || "/dbha.png"}
+                                  alt={member.name}
+                                  width={128}
+                                  height={128}
+                                  className={member.photo ? "w-full h-full object-cover" : "w-3/4 h-3/4 object-contain"}
+                                />
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <p className="text-xs font-bold text-primary uppercase tracking-wider mb-3">
+                            {member.role}
+                          </p>
+                          <h4 className="text-base font-bold text-foreground group-hover:text-primary transition-colors duration-500">
+                            {member.name}
+                          </h4>
+                        </div>
+
+                        {member.phone && (
+                          <div className="flex items-center justify-center gap-3 pt-6 border-t border-border/30">
+                            <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                              <Phone className="w-4 h-4 text-primary" />
+                            </div>
+                            <a
+                              href={`tel:+977${member.phone}`}
+                              className="text-sm text-muted-foreground hover:text-primary transition-colors duration-300 group-hover:font-medium"
+                            >
+                              +977 {member.phone}
+                            </a>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </>
+            )}
           </div>
         </section>
 

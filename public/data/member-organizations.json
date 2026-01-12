@@ -6,11 +6,38 @@
       "shortName": "Unity HGPA",
       "description": "A collective organization representing hotels and guest houses in the Unity area of Kathmandu.",
       "location": "Kathmandu",
-      "established": "2074 B.S.",
+      "established": "2069 B.S.",
       "committee": [
-        { "role": "President", "name": "Devaki Bhandari", "phone": "9851040296" },
-        { "role": "Vice President", "name": "Mohan Lama", "phone": "9852456789" },
-        { "role": "General Secretary", "name": "Niraj Tamang", "phone": "9852678901" }
+        { "role": "President", "name": "Mr. Saroj Ale", "phone": "9851170835", "photo": "/ekatamembers/sarojale.jpeg" },
+        { "role": "First Vice President", "name": "Mr. Salman Thaling", "phone": "9851123304", "photo": "/ekatamembers/salmanthaling.png" },
+        { "role": "Second Vice President", "name": "Mr. Tilak Prasad Chapagain", "phone": "9851129377", "photo": "/ekatamembers/tilakpsd.png" },
+        { "role": "Third Vice President", "name": "Mr. Prasbhu Prasad Chaudary", "phone": "9841237699", "photo": "/ekatamembers/prabupsd.png" },
+        { "role": "General Secretary", "name": "Mr. Prajwal Shrestha", "phone": "9811857457", "photo": "/ekatamembers/prajwalshrestha.png" },
+        { "role": "Secretary", "name": "Mr. Anish Baniya", "phone": "9851108710", "photo": "/ekatamembers/anishbaniya.png" },
+        { "role": "Treasurer", "name": "Mr. Kushal Shrestha", "phone": "9841185745", "photo": "/ekatamembers/kushalshrestha.png" },
+        { "role": "Assistant Treasurer", "name": "Mr. Dhani Jung Rai", "phone": "9866445495", "photo": "/ekatamembers/dhanijungrai.png" },
+        { "role": "Member", "name": "Mr. Gopal Koirla", "phone": "9818448547", "photo": "/ekatamembers/gopalkoirala.png" },
+        { "role": "Member", "name": "Mr. Anjani Koirala", "phone": "9851056032", "photo": "/ekatamembers/anjanikoirala.png" },
+        { "role": "Member", "name": "Ms. Junu Subba", "phone": "9862715688", "photo": "/ekatamembers/junusubba.png" },
+        { "role": "Member", "name": "Ms. Goma Limbu", "phone": "9843957290", "photo": "/ekatamembers/gomalimbu.png" },
+        { "role": "Member", "name": "Mr. Ishwor Prasad Paudel", "phone": "9841277529", "photo": "/ekatamembers/ishorprasadpaudel.png" },
+        { "role": "Member", "name": "Mr. Chudaeshor Shrestha", "phone": "9849799717", "photo": "/ekatamembers/chudeshorshrestha.png" },
+        { "role": "Member", "name": "Mr. Yeakdev Pandey (Sandip)", "phone": "9851105659", "photo": "/ekatamembers/yeakdevpandey.png" },
+        { "role": "Coordinator - Accounts Committee", "name": "Mr. Dhrub Kumar Shrestha", "phone": "", "photo": "/ekatamembers/dhrubkumarshrestha.png" },
+        { "role": "Accounts Committee Member", "name": "Mr. Yadab Prasad Subedi", "phone": "", "photo": "/ekatamembers/yadabprasadsubedi.png" },
+        { "role": "Accounts Committee Member", "name": "Mr. Dipendra Yadab", "phone": "", "photo": "/ekatamembers/dipendrayadab.png" }
+      ],
+      "advisors": [
+        { "role": "Former Chairman & Chief Advisor", "name": "Mr. Rishi Kumar Chaulagain", "phone": "", "photo": "/ekatamembers/rishikumar.png" },
+        { "role": "Advisor", "name": "Mr. Mohan Thebe", "phone": "", "photo": "/ekatamembers/mohanthebe.png" },
+        { "role": "Advisor", "name": "Mr. Damodar Nepal", "phone": "", "photo": "/ekatamembers/damodarnepal.png" },
+        { "role": "Advisor", "name": "Mr. Suresh Baral", "phone": "", "photo": "/ekatamembers/sureshbaral.png" },
+        { "role": "Advisor", "name": "Mr. Khem Raj Upreti", "phone": "", "photo": "/ekatamembers/khemrajupreti.png" },
+        { "role": "Advisor", "name": "Ms. Ratna Jyoti Subba", "phone": "", "photo": "/ekatamembers/ratnajyotisubba.png" },
+        { "role": "Advisor", "name": "Mr. Sanjeeb Shrestha", "phone": "", "photo": "/ekatamembers/sanjeebshrestha.png" }
+      ],
+      "staff": [
+        { "role": "Employee", "name": "Ms. Manisha Chalulagain", "phone": "", "photo": "/ekatamembers/manishachalulagain.png" }
       ]
     },
     {
