@@ -233,7 +233,7 @@ export function Header() {
             ))}
 
             {/* MOBILE MEMBERS DROPDOWN */}
-            <div className="relative">
+            <div className="relative z-50">
               <button
                 onClick={() => setMobileDropdownOpen(!mobileDropdownOpen)}
                 className={`flex items-center gap-1 whitespace-nowrap text-sm transition-all duration-200
@@ -248,10 +248,10 @@ export function Header() {
               </button>
               
               {/* Mobile Dropdown Content */}
-              <div className={`absolute top-full left-0 mt-1 transition-all duration-200 z-50 min-w-[180px] ${
+              <div className={`absolute top-full left-0 mt-1 transition-all duration-200 min-w-[180px] ${
                 mobileDropdownOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
               }`}>
-                <div className="bg-popover text-popover-foreground rounded-md border p-1 shadow-md">
+                <div className="bg-popover text-popover-foreground rounded-md border p-1 shadow-lg relative z-[100]">
                   <Link
                     href="/members/balaju"
                     className="relative flex cursor-default items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-hidden select-none w-full hover:bg-accent hover:text-accent-foreground"
