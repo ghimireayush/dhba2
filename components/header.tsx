@@ -213,6 +213,87 @@ export function Header() {
           <div className="flex gap-6 overflow-x-auto scrollbar-hide py-3">
             {[
               { href: "/", label: t("nav.home") },
+            ].map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`relative whitespace-nowrap text-sm ${
+                  isActive(link.href)
+                    ? "text-primary font-medium"
+                    : "text-foreground/80"
+                }`}
+              >
+                {link.label}
+                {isActive(link.href) && (
+                  <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-primary" />
+                )}
+              </Link>
+            ))}
+
+            {/* MOBILE MEMBERS DROPDOWN */}
+            <div className="relative group">
+              <button
+                className={`flex items-center gap-1 whitespace-nowrap text-sm transition-all duration-200
+                  ${
+                    pathname.startsWith("/members")
+                      ? "text-primary font-medium"
+                      : "text-foreground/80"
+                  }`}
+              >
+                {t("nav.members")}
+                <ChevronDown className="h-3 w-3 transition-transform duration-200 group-hover:rotate-180" />
+              </button>
+              
+              {/* Mobile Dropdown Content */}
+              <div className="absolute top-full left-0 mt-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 min-w-[180px]">
+                <div className="bg-popover text-popover-foreground rounded-md border p-1 shadow-md">
+                  <Link
+                    href="/members/balaju"
+                    className="relative flex cursor-default items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-hidden select-none w-full hover:bg-accent hover:text-accent-foreground"
+                  >
+                    {t("members.balaju")}
+                  </Link>
+                  <Link
+                    href="/members/kalanki"
+                    className="relative flex cursor-default items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-hidden select-none w-full hover:bg-accent hover:text-accent-foreground"
+                  >
+                    {t("members.kalanki")}
+                  </Link>
+                  <Link
+                    href="/members/kathmandu"
+                    className="relative flex cursor-default items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-hidden select-none w-full hover:bg-accent hover:text-accent-foreground"
+                  >
+                    {t("members.kathmandu")}
+                  </Link>
+                  <Link
+                    href="/members/nepalguesthouse"
+                    className="relative flex cursor-default items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-hidden select-none w-full hover:bg-accent hover:text-accent-foreground"
+                  >
+                    {t("members.nepalguesthouse")}
+                  </Link>
+                  <Link
+                    href="/members/sundhara"
+                    className="relative flex cursor-default items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-hidden select-none w-full hover:bg-accent hover:text-accent-foreground"
+                  >
+                    {t("members.sundhara")}
+                  </Link>
+                  <Link
+                    href="/members/united"
+                    className="relative flex cursor-default items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-hidden select-none w-full hover:bg-accent hover:text-accent-foreground"
+                  >
+                    {t("members.united")}
+                  </Link>
+                  <Link
+                    href="/members/nepalihotel"
+                    className="relative flex cursor-default items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-hidden select-none w-full hover:bg-accent hover:text-accent-foreground"
+                  >
+                    {t("members.nepalihotel")}
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            {[
               { href: "/hotels", label: t("nav.memberHotels") },
               { href: "/destinations", label: t("nav.destinations") },
               { href: "/events", label: t("nav.events") },
