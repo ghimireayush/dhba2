@@ -53,7 +53,7 @@ export default function ContactPage() {
         <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Contact" }]} />
         
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-primary via-secondary to-accent overflow-hidden">
+        <section className="relative py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-primary via-secondary to-accent overflow-hidden">
           <div className="absolute inset-0 bg-black/20"></div>
           <div className="absolute inset-0">
             <div className="absolute top-10 left-10 w-32 h-32 bg-white/10 rounded-full blur-3xl"></div>
