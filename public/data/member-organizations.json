@@ -1,0 +1,122 @@
+{
+  "organizations": [
+    {
+      "id": "unity-hotel-guesthouse-professionals",
+      "name": "Unity Hotel and Guest House Professionals Association",
+      "shortName": "Unity HGPA",
+      "description": "A collective organization representing hotels and guest houses in the Unity area of Kathmandu.",
+      "location": "Kathmandu",
+      "established": "2074 B.S.",
+      "committee": [
+        { "role": "President", "name": "Devaki Bhandari", "phone": "9851040296" },
+        { "role": "Vice President", "name": "Mohan Lama", "phone": "9852456789" },
+        { "role": "General Secretary", "name": "Niraj Tamang", "phone": "9852678901" }
+      ]
+    },
+    {
+      "id": "balaju-hotel-business",
+      "name": "Balaju Hotel Business Association",
+      "shortName": "Balaju HBA",
+      "description": "Representing the hospitality sector in Balaju area, committed to excellence in hotel services.",
+      "location": "Balaju, Kathmandu",
+      "established": "2069 B.S.",
+      "committee": [
+        { "role": "President", "name": "Tika Bahadur Rayamajhi", "phone": "9851007831" },
+        { "role": "Vice President", "name": "Govinda Marasini", "phone": "9851146651" },
+        { "role": "Vice President", "name": "Kok Bahadur Rasayali", "phone": "9851082945" },
+        { "role": "General Secretary", "name": "Lekhnath Kharal", "phone": "9851018353" },
+        { "role": "Secretary", "name": "Shailendra Bikram Thapa", "phone": "9851195211" },
+        { "role": "Treasurer", "name": "Ganga Bahadur Khati", "phone": "9851236769" },
+        { "role": "Member", "name": "Indra Parajuli", "phone": "9851124996" },
+        { "role": "Member", "name": "Surya Bahadur Khati", "phone": "9851195765" },
+        { "role": "Member", "name": "Nabaraj Gautam", "phone": "9849810909" },
+        { "role": "Member", "name": "Hari Ghimire", "phone": "9841698851" },
+        { "role": "Member", "name": "Tilak Sripali", "phone": "9851049951" },
+        { "role": "Member", "name": "Bimal Ji Si", "phone": "9841078496" },
+        { "role": "Member", "name": "Mani Kumar Rai", "phone": "9808254893" },
+        { "role": "Member", "name": "Hari Kishor Karki", "phone": "9843660506" },
+        { "role": "Member", "name": "Bishwaraj Syangbo", "phone": "9848013237" },
+        { "role": "Member", "name": "Goma Gaire", "phone": "9813159782" },
+        { "role": "Member", "name": "Goma Thapa", "phone": "9851202737" }
+      ]
+    },
+    {
+      "id": "kalanki-hotel-guesthouse",
+      "name": "Kalanki Hotel and Guest House Association",
+      "shortName": "Kalanki HGA",
+      "description": "Serving the hospitality community in Kalanki, one of Kathmandu's busiest transit areas.",
+      "location": "Kalanki, Kathmandu",
+      "established": "2070 B.S.",
+      "committee": [
+        { "role": "President", "name": "Rajesh Kumar Sharma", "phone": "9851234567" },
+        { "role": "Vice President", "name": "Priya Patel", "phone": "9851345678" },
+        { "role": "General Secretary", "name": "Anil Khatri", "phone": "9851456789" }
+      ]
+    },
+    {
+      "id": "kathmandu-hotel-business",
+      "name": "Kathmandu Hotel Business Association",
+      "shortName": "Kathmandu HBA",
+      "description": "The central hotel business association representing hotels in the heart of Kathmandu.",
+      "location": "Kathmandu",
+      "established": "2065 B.S.",
+      "committee": [
+        { "role": "President", "name": "Suresh Baral", "phone": "9851567890" },
+        { "role": "Vice President", "name": "Maya Desai", "phone": "9851678901" },
+        { "role": "General Secretary", "name": "Devi Nath Sharma", "phone": "9851789012" }
+      ]
+    },
+    {
+      "id": "nepal-guesthouse-business",
+      "name": "Nepal Guest House Business Association",
+      "shortName": "Nepal GHB",
+      "description": "Dedicated to promoting and supporting guest house businesses across Nepal.",
+      "location": "Kathmandu",
+      "established": "2068 B.S.",
+      "committee": [
+        { "role": "President", "name": "Vikram Singh Rana", "phone": "9851890123" },
+        { "role": "Vice President", "name": "Deepika Gurung", "phone": "9851901234" },
+        { "role": "General Secretary", "name": "Ramesh Adhikari", "phone": "9852012345" }
+      ]
+    },
+    {
+      "id": "sundhara-hotel-business",
+      "name": "Sundhara Hotel Business Association",
+      "shortName": "Sundhara HBA",
+      "description": "Representing hotels in the historic Sundhara area of Kathmandu.",
+      "location": "Sundhara, Kathmandu",
+      "established": "2071 B.S.",
+      "committee": [
+        { "role": "President", "name": "Arjun Verma", "phone": "9852123456" },
+        { "role": "Vice President", "name": "Neha Singh", "phone": "9852234567" },
+        { "role": "General Secretary", "name": "Rajiv Thakur", "phone": "9852345678" }
+      ]
+    },
+    {
+      "id": "united-hotel-guesthouse",
+      "name": "DHBA - District Hotel Business Association",
+      "shortName": "DHBA",
+      "description": "The umbrella organization uniting all hotel business associations in Kathmandu district.",
+      "location": "Balaju-16, Kathmandu",
+      "established": "2074 B.S.",
+      "committee": [
+        { "role": "President", "name": "Mohan Lama", "phone": "9852456789" },
+        { "role": "Vice President", "name": "Anita Sherpa", "phone": "9852567890" },
+        { "role": "General Secretary", "name": "Niraj Tamang", "phone": "9852678901" }
+      ]
+    },
+    {
+      "id": "nepali-hotel-business",
+      "name": "Nepali Hotel Business Association",
+      "shortName": "Nepali HBA",
+      "description": "Promoting Nepali hospitality standards and supporting local hotel businesses.",
+      "location": "Kathmandu",
+      "established": "2072 B.S.",
+      "committee": [
+        { "role": "President", "name": "Kiran Malla", "phone": "9852789012" },
+        { "role": "Vice President", "name": "Sunita Yadav", "phone": "9852890123" },
+        { "role": "General Secretary", "name": "Prakash Pokhrel", "phone": "9852901234" }
+      ]
+    }
+  ]
+}

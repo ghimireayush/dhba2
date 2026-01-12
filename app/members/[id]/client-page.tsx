@@ -49,14 +49,14 @@ export default function ClientPage() {
           <div className="relative max-w-6xl mx-auto text-center">
             <div className="mb-6">
               <span className="inline-block px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-semibold mb-4">
-                Member Organization
+                Established {organization.established}
               </span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
               {organization.name}
             </h1>
             <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Part of District Hotel Business Association Kathmandu
+              {organization.description}
             </p>
             
             {/* Stats */}
@@ -68,7 +68,7 @@ export default function ClientPage() {
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
                 <MapPin className="w-8 h-8 text-white mb-3 mx-auto" />
-                <div className="text-3xl font-bold text-white mb-1">Kathmandu</div>
+                <div className="text-xl font-bold text-white mb-1">{organization.location}</div>
                 <div className="text-white/80 text-sm">Location</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 col-span-2 md:col-span-1">
